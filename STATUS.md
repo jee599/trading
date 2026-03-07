@@ -2,36 +2,40 @@
 
 ## Current Goal
 
-- Lock the document-driven workflow and prepare for sequential implementation work.
+- Lock the product direction and prepare the first implementation slice.
 
 ## Current Task
 
-- Fill in `PROJECT_BRIEF.md` and define the first implementation task.
+- Define the initial system architecture and the official runner contract.
 
 ## Working Session
 
-- Agent: None
-- Version: None
-- Started At: None
-- Scope: None
-- Expected Output: None
+- Agent: GPT
+- Version: GPT-5 Codex
+- Started At: 2026-03-07
+- Scope: Product brief definition, system direction, and handoff-ready planning
+- Expected Output: A filled project brief and a concrete next engineering step
 
 ## Done
 
 - Created `AGENTS.md`, `PROJECT_BRIEF.md`, `STATUS.md`, and `ARCHITECTURE.md`
 - Defined the sequential workflow rules for `master`
 - Added per-agent-version contribution tracking
+- Filled the initial product brief for the AI tower battle platform
+- Clarified the official runner direction instead of fully free-form CLI submissions
+- Fixed the Git remote and pushed `master` to `origin`
 
 ## Next
 
-- Fill in project goals, scope, and success criteria in `PROJECT_BRIEF.md`
-- Turn the first implementation task into a concrete item in `Current Task`
-- Add initial folder structure and reflect it in `ARCHITECTURE.md` if needed
+- Define the official runner input and output contract
+- Choose the web and backend stack
+- Create the initial repository structure for web, backend, and runner
+- Draft the score formula and replay data model
 
 ## Remaining
 
-- Define product requirements
-- Confirm implementation scope
+- Confirm implementation stack
+- Define formal API contracts
 - Build the codebase and features
 
 ## Blocked
@@ -43,10 +47,14 @@
 - Added four collaboration docs
 - Added agent handoff rules
 - Added contribution tracking tables
+- Added product-level direction for the RPG tower challenge platform
+- Confirmed daily seasons, daily submission limits, and public replay visibility
 
 ## Notes for Next Agent
 
-- Fill in `PROJECT_BRIEF.md` before starting implementation.
+- The next high-value task is the runner contract, not UI polish.
+- Keep the first version server-light: local full-run simulation with end-of-run upload.
+- Preserve the official runner approach so users only need to implement agent logic.
 - Update `Working Session` before doing any task.
 - Update `Agent Contribution` at the end of every task.
 
@@ -56,14 +64,14 @@
 
 | Agent | Version | Scope | Key Contribution | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | Collaboration docs and workflow rules | Created workflow docs, handoff rules, and contribution tracking | 100% |
+| GPT | GPT-5 Codex | Product brief and architecture direction | Defined the project direction, architecture direction, workflow docs, and contribution tracking | 100% |
 | Claude | | | | |
 
 ### Cumulative
 
 | Agent | Version | Tasks Completed | Key Areas | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | 1 | Workflow rules, status tracking, architecture notes | 100% |
+| GPT | GPT-5 Codex | 2 | Workflow rules, product brief, status tracking, architecture notes | 100% |
 | Claude | | | | |
 
 Contribution values are rough operational notes, not exact metrics.
