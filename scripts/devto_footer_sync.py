@@ -130,7 +130,7 @@ def main() -> int:
         forced_body = FORCED_BODIES.get(article_id)
         target_body = normalize_body(forced_body if forced_body is not None else current_body)
 
-        if forced_body is None and current_body.rstrip().endswith(FOOTER):
+        if current_body.rstrip() == target_body.rstrip():
             skipped.append(article_id)
             continue
 
