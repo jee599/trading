@@ -6,15 +6,15 @@
 
 ## Current Task
 
-- Add editor-side auto-bootstrap so the current runtime scaffold can be instantiated inside Unity with one menu action.
+- Fix Unity compile blockers so the generated bootstrap menu can load in the editor.
 
 ## Working Session
 
 - Agent: GPT
 - Version: GPT-5 Codex
 - Started At: 2026-03-10
-- Scope: `BLEND IN` project pivot, runtime gameplay scaffold, and Unity editor bootstrap
-- Expected Output: Updated docs plus runtime and editor scripts that generate a connected graybox prototype setup
+- Scope: Unity compile-blocker fix for the bootstrap workflow
+- Expected Output: Missing shared types restored so Unity can finish compiling and expose the `Blend In` editor menu
 
 ## Done
 
@@ -28,10 +28,11 @@
 - Added HUD scripts for timer, suspicion, mission, disguise, minimap, and game over display.
 - Added `UNITY_SETUP.md` so the current code scaffold can be wired into a real Unity project.
 - Added Unity editor bootstrap scripts that generate sample data assets, placeholder prefabs, graybox scenes, markers, systems, and HUD with one menu command.
+- Restored the missing shared `CitizenAnimationState` enum so Unity runtime and event scripts can compile again.
 
 ## Next
 
-- Open the project in Unity and run `Blend In > Bootstrap Prototype`.
+- Reopen Unity, let scripts recompile, and run `Blend In > Bootstrap Prototype`.
 - Verify the generated `GameScene` compiles and plays after NavMesh bake.
 - Replace placeholder meshes and materials with the free asset pack content.
 - Add Animator controllers and connect actual character rig clips.
@@ -53,12 +54,13 @@
 - Architecture notes pivoted to Unity gameplay systems.
 - Added the full first-pass runtime scaffold under `Assets/_Project/Scripts`.
 - Added editor bootstrap automation under `Assets/_Project/Editor`.
+- Added the missing shared animation-state enum required by citizen and event scripts.
 
 ## Notes for Next Agent
 
 - The next highest-value work is validating the generated Unity content inside the editor, not expanding systems blindly.
 - Keep ScriptableObject-driven data and lightweight scene components as the default pattern.
-- Validate compile errors and the bootstrap menu inside Unity first, because this repo still depends on actual Unity import behavior.
+- Validate Unity compile errors and the bootstrap menu first, because missing shared types can hide editor actions entirely.
 - If you add new top-level folders or dependencies, update `ARCHITECTURE.md`.
 - Update the `Working Session`, `Done`, `Next`, `Blocked`, and `Agent Contribution` sections again before ending the next task.
 
