@@ -14,10 +14,23 @@
 4. Copy this repository's `Assets/_Project` folder into the Unity project's `Assets` folder.
 5. Reopen the Unity project.
 6. Let Unity reimport scripts and compile.
+7. Run `Blend In > Bootstrap Prototype` from the Unity menu.
+8. Open `Assets/_Project/Scenes/GameScene.unity`.
+9. If the automatic navmesh build did not produce a valid result, bake the NavMesh once in the editor.
+
+## Bootstrap Output
+
+The bootstrap menu creates or refreshes:
+
+- Sample data assets under `Assets/_Project/Data`
+- Shared placeholder materials under `Assets/_Project/Art/Materials`
+- Placeholder prefabs under `Assets/_Project/Prefabs`
+- `MainMenu`, `GameScene`, and `ResultScene`
+- A graybox city layout with destination points, spawn zones, mission triggers, a player, a Hunter, managers, and HUD
 
 ## Scene Wiring
 
-1. Create `MainMenu`, `GameScene`, and `ResultScene`.
+1. If you are not using the bootstrap menu, create `MainMenu`, `GameScene`, and `ResultScene`.
 2. In `GameScene`, add empty GameObjects for:
    - `GameManager`
    - `TimeManager`
@@ -32,7 +45,7 @@
 
 ### Player
 
-1. Create a `Player` prefab.
+1. Create a `Player` prefab if you are not using the bootstrap menu.
 2. Add:
    - `CharacterController`
    - `PlayerController`
@@ -44,7 +57,7 @@
 
 ### Citizen
 
-1. Create a `Citizen` prefab.
+1. Create a `Citizen` prefab if you are not using the bootstrap menu.
 2. Add:
    - `NavMeshAgent`
    - `CitizenAI`
@@ -53,7 +66,7 @@
 
 ### Hunter
 
-1. Create a `Hunter` prefab.
+1. Create a `Hunter` prefab if you are not using the bootstrap menu.
 2. Add:
    - `NavMeshAgent`
    - `HunterAI`

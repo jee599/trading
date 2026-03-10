@@ -55,6 +55,7 @@ public class CitizenSpawner : MonoBehaviour
     private static SpawnZone FindZone(string zoneTag, SpawnZone[] zones)
     {
         SpawnZone fallback = null;
+        var matches = new System.Collections.Generic.List<SpawnZone>();
 
         for (var i = 0; i < zones.Length; i++)
         {
@@ -67,8 +68,13 @@ public class CitizenSpawner : MonoBehaviour
             fallback ??= zone;
             if (string.Equals(zone.zoneTag, zoneTag))
             {
-                return zone;
+                matches.Add(zone);
             }
+        }
+
+        if (matches.Count > 0)
+        {
+            return matches[Random.Range(0, matches.Count)];
         }
 
         return fallback;

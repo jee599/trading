@@ -8,6 +8,7 @@
 ## Directory Structure
 
 - `Assets/_Project/Scenes`: Unity scenes for menu, gameplay, and results.
+- `Assets/_Project/Editor`: Unity editor automation such as the prototype bootstrapper.
 - `Assets/_Project/Scripts/Core`: game state and game-time orchestration.
 - `Assets/_Project/Scripts/AI`: citizen data, behavior trees, and spawning.
 - `Assets/_Project/Scripts/Character`: shared character appearance systems.
@@ -30,6 +31,7 @@
 - `EventManager` and `GameEvent` assets now provide runtime event scheduling and citizen or player reactions.
 - `MissionManager` plus `MissionTrigger` provide one-active-mission prototype logic and score payout.
 - HUD scripts now exist for timer, suspicion, mission, disguise, minimap, game over, and touch joystick controls.
+- `BlendInBootstrapper` can generate placeholder assets, prefabs, and scenes from inside the Unity editor to reduce manual hookup.
 
 ## Runtime Flow
 
@@ -56,6 +58,7 @@
 - Shared materials plus `MaterialPropertyBlock` color overrides remain the default character-variation strategy.
 - Frame-spread updates will be added above the current per-agent tick loop once Hunter, suspicion, and events are in place.
 - The current code already applies simple citizen tick-rate LOD, but scene-side culling and frame spreading are still pending.
+- The editor bootstrap intentionally generates graybox content only; imported free assets should replace these placeholders later without changing the runtime contracts.
 
 ## Decisions Log
 
@@ -63,3 +66,4 @@
 - 2026-03-10: Pivot the repository from the earlier web-platform concept to the `BLEND IN` Unity prototype specification.
 - 2026-03-10: Prioritize the first playable systems slice over scene polish or asset import automation.
 - 2026-03-10: Implement the first runtime-complete code scaffold across core, player, AI, Hunter, event, mission, and HUD layers.
+- 2026-03-10: Add an editor bootstrap path so Unity can auto-generate a connected graybox prototype scene.
