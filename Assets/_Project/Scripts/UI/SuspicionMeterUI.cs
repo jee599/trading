@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +5,7 @@ public class SuspicionMeterUI : MonoBehaviour
 {
     public SuspicionSystem suspicionSystem;
     public Image fillImage;
-    public TextMeshProUGUI valueLabel;
+    public Text valueLabel;
     public Gradient fillGradient;
 
     private void Start()

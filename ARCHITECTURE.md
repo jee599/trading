@@ -7,6 +7,8 @@
 
 ## Directory Structure
 
+- `Packages/manifest.json`: Unity package manifest for the shared repo project root.
+- `ProjectSettings/ProjectVersion.txt`: Unity editor version pin so the repository opens directly in Unity Hub.
 - `Assets/_Project/Scenes`: Unity scenes for menu, gameplay, and results.
 - `Assets/_Project/Editor`: Unity editor automation such as the prototype bootstrapper.
 - `Assets/_Project/Scripts/Core`: game state and game-time orchestration.
@@ -67,3 +69,4 @@
 - 2026-03-10: Prioritize the first playable systems slice over scene polish or asset import automation.
 - 2026-03-10: Implement the first runtime-complete code scaffold across core, player, AI, Hunter, event, mission, and HUD layers.
 - 2026-03-10: Add an editor bootstrap path so Unity can auto-generate a connected graybox prototype scene.
+- 2026-03-10: Promote the repository itself to the Unity project root and remove the bootstrapper's TextMesh Pro dependency so editor setup works in the same folder.

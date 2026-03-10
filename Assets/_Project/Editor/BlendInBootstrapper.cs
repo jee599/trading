@@ -1,9 +1,9 @@
 #if UNITY_EDITOR
-using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public static partial class BlendInBootstrapper
@@ -497,7 +497,13 @@ public static partial class BlendInBootstrapper
 
     private static Shader FindPrototypeShader()
     {
-        return Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard");
+        var hasActiveRenderPipeline = GraphicsSettings.currentRenderPipeline != null || GraphicsSettings.defaultRenderPipeline != null;
+        if (hasActiveRenderPipeline)
+        {
+            return Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard");
+        }
+
+        return Shader.Find("Standard");
     }
 
     private static T CreateOrUpdateAsset<T>(string path, System.Action<T> configure) where T : ScriptableObject
@@ -540,19 +546,18 @@ public static partial class BlendInBootstrapper
         };
     }
 
-    private static TextMeshProUGUI CreateTextElement(string name, Transform parent, string text, int fontSize, TextAlignmentOptions alignment)
+    private static Text CreateTextElement(string name, Transform parent, string text, int fontSize, TextAnchor alignment)
     {
-        var go = new GameObject(name, typeof(RectTransform), typeof(TextMeshProUGUI));
+        var go = new GameObject(name, typeof(RectTransform), typeof(Text));
         go.transform.SetParent(parent, false);
-        var label = go.GetComponent<TextMeshProUGUI>();
+        var label = go.GetComponent<Text>();
         label.text = text;
         label.fontSize = fontSize;
         label.color = Color.white;
         label.alignment = alignment;
-        if (TMP_Settings.defaultFontAsset != null)
-        {
-            label.font = TMP_Settings.defaultFontAsset;
-        }
+        label.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        label.horizontalOverflow = HorizontalWrapMode.Wrap;
+        label.verticalOverflow = VerticalWrapMode.Truncate;
 
         return label;
     }

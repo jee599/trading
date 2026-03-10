@@ -1,12 +1,12 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverUI : MonoBehaviour
 {
     public GameObject root;
-    public TextMeshProUGUI titleLabel;
-    public TextMeshProUGUI scoreLabel;
-    public TextMeshProUGUI summaryLabel;
+    public Text titleLabel;
+    public Text scoreLabel;
+    public Text summaryLabel;
 
     private bool _subscribed;
 

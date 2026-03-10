@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +6,7 @@ public class DisguiseUI : MonoBehaviour
     public PlayerDisguise playerDisguise;
     public Button disguiseButton;
     public Image progressFill;
-    public TextMeshProUGUI chargesLabel;
+    public Text chargesLabel;
 
     private void Start()
     {

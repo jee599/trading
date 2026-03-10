@@ -6,15 +6,15 @@
 
 ## Current Task
 
-- Fix Unity compile blockers so the generated bootstrap menu can load in the editor.
+- Verify the same-repository Unity workflow by opening this folder in Unity and regenerating the bootstrap scenes.
 
 ## Working Session
 
 - Agent: GPT
 - Version: GPT-5 Codex
 - Started At: 2026-03-10
-- Scope: Unity compile-blocker fix for the bootstrap workflow
-- Expected Output: Missing shared types restored so Unity can finish compiling and expose the `Blend In` editor menu
+- Scope: Unity project-root setup and dependency cleanup for the shared-repo workflow
+- Expected Output: Unity can open this repository directly, compile without extra package assumptions, and expose the `Blend In` bootstrap menu
 
 ## Done
 
@@ -29,11 +29,15 @@
 - Added `UNITY_SETUP.md` so the current code scaffold can be wired into a real Unity project.
 - Added Unity editor bootstrap scripts that generate sample data assets, placeholder prefabs, graybox scenes, markers, systems, and HUD with one menu command.
 - Restored the missing shared `CitizenAnimationState` enum so Unity runtime and event scripts can compile again.
+- Added Unity project-root files under `Packages` and `ProjectSettings` so this repository can be opened directly in Unity Hub.
+- Removed the bootstrap and HUD scripts' TextMesh Pro dependency so first compile no longer assumes TMP is installed.
+- Added a safer material-shader fallback in the bootstrapper so placeholder assets use `Standard` when no render pipeline asset is active yet.
 
 ## Next
 
-- Reopen Unity, let scripts recompile, and run `Blend In > Bootstrap Prototype`.
-- Verify the generated `GameScene` compiles and plays after NavMesh bake.
+- Open this repository root directly in Unity Hub.
+- Let Unity restore packages and confirm the `Blend In` menu appears without compile errors.
+- Run `Blend In > Bootstrap Prototype` and verify the generated `GameScene` after NavMesh bake.
 - Replace placeholder meshes and materials with the free asset pack content.
 - Add Animator controllers and connect actual character rig clips.
 
@@ -46,7 +50,7 @@
 
 ## Blocked
 
-- Scene, prefab, NavMesh, and asset-import work still require Unity editor setup that cannot be completed from the terminal alone.
+- Direct validation of package restore, first import, scene generation, and NavMesh bake still requires the Unity editor.
 
 ## Recent Changes
 
@@ -55,12 +59,15 @@
 - Added the full first-pass runtime scaffold under `Assets/_Project/Scripts`.
 - Added editor bootstrap automation under `Assets/_Project/Editor`.
 - Added the missing shared animation-state enum required by citizen and event scripts.
+- Promoted the repository itself to a minimal Unity project root with `Packages/manifest.json` and `ProjectSettings/ProjectVersion.txt`.
+- Replaced remaining TMP-based bootstrap UI generation with `UnityEngine.UI.Text`.
 
 ## Notes for Next Agent
 
-- The next highest-value work is validating the generated Unity content inside the editor, not expanding systems blindly.
+- The next highest-value work is validating the direct-open Unity workflow inside the editor, not expanding systems blindly.
 - Keep ScriptableObject-driven data and lightweight scene components as the default pattern.
-- Validate Unity compile errors and the bootstrap menu first, because missing shared types can hide editor actions entirely.
+- Open this repository root directly instead of copying `Assets/_Project` into another Unity project.
+- The bootstrapper no longer requires TMP and now falls back to `Standard` materials if no active render pipeline asset exists yet.
 - If you add new top-level folders or dependencies, update `ARCHITECTURE.md`.
 - Update the `Working Session`, `Done`, `Next`, `Blocked`, and `Agent Contribution` sections again before ending the next task.
 
@@ -70,14 +77,14 @@
 
 | Agent | Version | Scope | Key Contribution | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | Product pivot, runtime gameplay scaffold, and editor bootstrap | Reframed the repo around `BLEND IN` and added the first end-to-end Unity runtime plus auto-setup pass | 100% |
+| GPT | GPT-5 Codex | Product pivot, runtime gameplay scaffold, editor bootstrap, and Unity project-root setup | Reframed the repo around `BLEND IN`, added the first end-to-end Unity runtime plus auto-setup pass, and converted the repo into a directly openable Unity project | 100% |
 | Claude | | | | |
 
 ### Cumulative
 
 | Agent | Version | Tasks Completed | Key Areas | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | 5 | Workflow rules, project docs, status tracking, architecture notes, DEV tooling, Unity prototype pivot, runtime scaffold, and editor bootstrap | 100% |
+| GPT | GPT-5 Codex | 6 | Workflow rules, project docs, status tracking, architecture notes, DEV tooling, Unity prototype pivot, runtime scaffold, editor bootstrap, and Unity project-root setup | 100% |
 | Claude | | | | |
 
 Contribution values are rough operational notes, not exact metrics.

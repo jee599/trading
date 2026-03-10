@@ -1,9 +1,9 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimerUI : MonoBehaviour
 {
-    public TextMeshProUGUI timerLabel;
+    public Text timerLabel;
 
     private void OnEnable()
     {

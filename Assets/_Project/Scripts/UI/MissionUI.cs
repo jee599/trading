@@ -1,11 +1,10 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MissionUI : MonoBehaviour
 {
     public MissionManager missionManager;
-    public TextMeshProUGUI missionLabel;
+    public Text missionLabel;
     public Image progressFill;
 
     private void Start()

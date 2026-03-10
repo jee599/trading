@@ -1,6 +1,5 @@
 #if UNITY_EDITOR
 using System.Reflection;
-using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -26,10 +25,10 @@ public static partial class BlendInBootstrapper
         CreatePrimitiveGround(new Vector3(0f, 0f, 0f), Vector3.one * 3f, Color.gray);
 
         var canvas = CreateCanvas("MainMenuCanvas");
-        var title = CreateTextElement("Title", canvas.transform, "BLEND IN", 52, TextAlignmentOptions.Center);
+        var title = CreateTextElement("Title", canvas.transform, "BLEND IN", 52, TextAnchor.MiddleCenter);
         Stretch((RectTransform)title.transform, new Vector2(0.5f, 0.75f), new Vector2(0.5f, 0.75f), Vector2.zero, new Vector2(600f, 100f));
 
-        var body = CreateTextElement("Body", canvas.transform, "Use Blend In/Bootstrap Prototype to rebuild the sample scenes.", 24, TextAlignmentOptions.Center);
+        var body = CreateTextElement("Body", canvas.transform, "Use Blend In/Bootstrap Prototype to rebuild the sample scenes.", 24, TextAnchor.MiddleCenter);
         Stretch((RectTransform)body.transform, new Vector2(0.5f, 0.62f), new Vector2(0.5f, 0.62f), Vector2.zero, new Vector2(900f, 80f));
 
         EditorSceneManager.SaveScene(scene, SceneRoot + "/MainMenu.unity");
@@ -44,10 +43,10 @@ public static partial class BlendInBootstrapper
         CreatePrimitiveGround(new Vector3(0f, 0f, 0f), Vector3.one * 2f, Color.gray);
 
         var canvas = CreateCanvas("ResultCanvas");
-        var title = CreateTextElement("Title", canvas.transform, "Result Scene Placeholder", 42, TextAlignmentOptions.Center);
+        var title = CreateTextElement("Title", canvas.transform, "Result Scene Placeholder", 42, TextAnchor.MiddleCenter);
         Stretch((RectTransform)title.transform, new Vector2(0.5f, 0.70f), new Vector2(0.5f, 0.70f), Vector2.zero, new Vector2(900f, 80f));
 
-        var body = CreateTextElement("Body", canvas.transform, "GameOverUI currently displays inside GameScene. Use this scene later for flow polish.", 22, TextAlignmentOptions.Center);
+        var body = CreateTextElement("Body", canvas.transform, "GameOverUI currently displays inside GameScene. Use this scene later for flow polish.", 22, TextAnchor.MiddleCenter);
         Stretch((RectTransform)body.transform, new Vector2(0.5f, 0.58f), new Vector2(0.5f, 0.58f), Vector2.zero, new Vector2(1000f, 80f));
 
         EditorSceneManager.SaveScene(scene, SceneRoot + "/ResultScene.unity");
@@ -214,7 +213,7 @@ public static partial class BlendInBootstrapper
 
         var timerRoot = new GameObject("TimerUI", typeof(RectTransform), typeof(TimerUI));
         timerRoot.transform.SetParent(canvas.transform, false);
-        var timerText = CreateTextElement("Label", timerRoot.transform, "Timer 03:00", 28, TextAlignmentOptions.Center);
+        var timerText = CreateTextElement("Label", timerRoot.transform, "Timer 03:00", 28, TextAnchor.MiddleCenter);
         Stretch((RectTransform)timerRoot.transform, new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(120f, -40f), new Vector2(220f, 50f));
         Stretch((RectTransform)timerText.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
         timerRoot.GetComponent<TimerUI>().timerLabel = timerText;
@@ -224,7 +223,7 @@ public static partial class BlendInBootstrapper
         Stretch((RectTransform)missionRoot.transform, new Vector2(0f, 0f), new Vector2(0f, 0f), new Vector2(180f, 140f), new Vector2(320f, 90f));
         var missionBg = CreateImageElement("Background", missionRoot.transform, new Color(0f, 0f, 0f, 0.35f));
         Stretch((RectTransform)missionBg.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
-        var missionText = CreateTextElement("Label", missionRoot.transform, "Mission: --", 22, TextAlignmentOptions.TopLeft);
+        var missionText = CreateTextElement("Label", missionRoot.transform, "Mission: --", 22, TextAnchor.UpperLeft);
         Stretch((RectTransform)missionText.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), new Vector2(14f, -10f), new Vector2(-28f, -28f));
         var missionProgressBg = CreateImageElement("ProgressBg", missionRoot.transform, new Color(1f, 1f, 1f, 0.12f));
         Stretch((RectTransform)missionProgressBg.transform, new Vector2(0f, 0f), new Vector2(1f, 0f), new Vector2(0f, 12f), new Vector2(-24f, 12f));
@@ -247,7 +246,7 @@ public static partial class BlendInBootstrapper
         suspicionFill.fillMethod = Image.FillMethod.Horizontal;
         suspicionFill.fillAmount = 0f;
         Stretch((RectTransform)suspicionFill.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
-        var suspicionLabel = CreateTextElement("Value", suspicionRoot.transform, "Suspicion 0", 22, TextAlignmentOptions.Center);
+        var suspicionLabel = CreateTextElement("Value", suspicionRoot.transform, "Suspicion 0", 22, TextAnchor.MiddleCenter);
         Stretch((RectTransform)suspicionLabel.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
         var suspicionUi = suspicionRoot.GetComponent<SuspicionMeterUI>();
         suspicionUi.suspicionSystem = suspicion;
@@ -257,13 +256,13 @@ public static partial class BlendInBootstrapper
 
         var disguiseButton = CreateButtonElement("DisguiseButton", canvas.transform, new Color(0.12f, 0.22f, 0.32f, 0.85f));
         Stretch((RectTransform)disguiseButton.transform, new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(-100f, 170f), new Vector2(150f, 72f));
-        var disguiseLabel = CreateTextElement("Label", disguiseButton.transform, "Disguise", 22, TextAlignmentOptions.Center);
+        var disguiseLabel = CreateTextElement("Label", disguiseButton.transform, "Disguise", 22, TextAnchor.MiddleCenter);
         Stretch((RectTransform)disguiseLabel.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), new Vector2(0f, 14f), new Vector2(-12f, -22f));
         var disguiseProgress = CreateImageElement("Progress", disguiseButton.transform, new Color(0.20f, 0.75f, 0.45f, 0.9f));
         disguiseProgress.type = Image.Type.Filled;
         disguiseProgress.fillMethod = Image.FillMethod.Horizontal;
         Stretch((RectTransform)disguiseProgress.transform, new Vector2(0f, 0f), new Vector2(1f, 0f), new Vector2(0f, 8f), new Vector2(-20f, 10f));
-        var disguiseCharges = CreateTextElement("Charges", disguiseButton.transform, "Disguise x3", 18, TextAlignmentOptions.Center);
+        var disguiseCharges = CreateTextElement("Charges", disguiseButton.transform, "Disguise x3", 18, TextAnchor.MiddleCenter);
         Stretch((RectTransform)disguiseCharges.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), new Vector2(0f, -14f), new Vector2(-12f, -24f));
         var disguiseUiGo = new GameObject("DisguiseUI", typeof(RectTransform), typeof(DisguiseUI));
         disguiseUiGo.transform.SetParent(canvas.transform, false);
@@ -275,7 +274,7 @@ public static partial class BlendInBootstrapper
 
         var minimapButton = CreateButtonElement("MinimapButton", canvas.transform, new Color(0.05f, 0.08f, 0.10f, 0.75f));
         Stretch((RectTransform)minimapButton.transform, new Vector2(1f, 1f), new Vector2(1f, 1f), new Vector2(-110f, -72f), new Vector2(190f, 190f));
-        var minimapText = CreateTextElement("Label", minimapButton.transform, "MINIMAP", 20, TextAlignmentOptions.Center);
+        var minimapText = CreateTextElement("Label", minimapButton.transform, "MINIMAP", 20, TextAnchor.MiddleCenter);
         Stretch((RectTransform)minimapText.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
         var minimapUiGo = new GameObject("MinimapUI", typeof(RectTransform), typeof(MinimapUI));
         minimapUiGo.transform.SetParent(canvas.transform, false);
@@ -285,11 +284,11 @@ public static partial class BlendInBootstrapper
 
         var gameOverOverlay = CreateImageElement("GameOverOverlay", canvas.transform, new Color(0f, 0f, 0f, 0.7f));
         Stretch((RectTransform)gameOverOverlay.transform, new Vector2(0f, 0f), new Vector2(1f, 1f), Vector2.zero, Vector2.zero);
-        var gameOverTitle = CreateTextElement("Title", gameOverOverlay.transform, "Caught", 46, TextAlignmentOptions.Center);
+        var gameOverTitle = CreateTextElement("Title", gameOverOverlay.transform, "Caught", 46, TextAnchor.MiddleCenter);
         Stretch((RectTransform)gameOverTitle.transform, new Vector2(0.5f, 0.65f), new Vector2(0.5f, 0.65f), Vector2.zero, new Vector2(700f, 80f));
-        var gameOverScore = CreateTextElement("Score", gameOverOverlay.transform, "Score 0", 30, TextAlignmentOptions.Center);
+        var gameOverScore = CreateTextElement("Score", gameOverOverlay.transform, "Score 0", 30, TextAnchor.MiddleCenter);
         Stretch((RectTransform)gameOverScore.transform, new Vector2(0.5f, 0.54f), new Vector2(0.5f, 0.54f), Vector2.zero, new Vector2(500f, 60f));
-        var gameOverSummary = CreateTextElement("Summary", gameOverOverlay.transform, "Summary", 22, TextAlignmentOptions.Center);
+        var gameOverSummary = CreateTextElement("Summary", gameOverOverlay.transform, "Summary", 22, TextAnchor.MiddleCenter);
         Stretch((RectTransform)gameOverSummary.transform, new Vector2(0.5f, 0.46f), new Vector2(0.5f, 0.46f), Vector2.zero, new Vector2(800f, 60f));
         var gameOverUiGo = new GameObject("GameOverUI", typeof(RectTransform), typeof(GameOverUI));
         gameOverUiGo.transform.SetParent(canvas.transform, false);
