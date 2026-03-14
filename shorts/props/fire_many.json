@@ -1,0 +1,146 @@
+{
+  "id": "fire_many_001",
+  "title": {
+    "ko": "사주에 불이 많은 사람 특징",
+    "en": "People with too much Fire",
+    "ja": "四柱に火が多い人の特徴"
+  },
+  "theme": {
+    "bg": [
+      "#1a0808",
+      "#6b1515",
+      "#b8372a"
+    ],
+    "accent": "#ffd700",
+    "textColor": "#ffffff"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "사주에 불이 많은 사람 특징",
+        "en": "Traits of people with too much fire",
+        "ja": "四柱に火が多い人の特徴です"
+      },
+      "text": "사주에 불이 많은 사람 특징",
+      "textAnimation": "charByCharFire",
+      "lottie": "fire",
+      "lottiePosition": "center",
+      "cameraEffect": "zoomOut",
+      "sfx": "whoosh"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "한번 빡치면 자기도 못 멈춤. 회의 중에 반대 의견 나오면 눈에서 불이 남.",
+        "en": "Once they snap, even they cannot stop. One opposing opinion and their eyes are on fire.",
+        "ja": "一度火がつくと自分でも止められません。反対意見が出ると目に火がつきます。"
+      },
+      "number": 1,
+      "title": "한번 빡치면 못 멈춤",
+      "titleAnimation": "slideInLeft",
+      "icon": "fire_eyes",
+      "iconAnimation": "popBounce",
+      "bgEffect": "screenShake",
+      "sfx": "slam"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "열정은 미쳤는데 3일을 못 감. 월요일에 이번엔 진짜. 수요일에 이미 새거 시작.",
+        "en": "Their passion is wild, but it rarely lasts three days. Monday is a new era, Wednesday is already a new project.",
+        "ja": "情熱はすごいのに三日続きません。月曜に決意して、水曜にはもう別のことを始めています。"
+      },
+      "number": 2,
+      "title": "열정 MAX... 3일 한계",
+      "titleAnimation": "popIn",
+      "icon": "calendar_countdown",
+      "iconAnimation": "countdown321",
+      "bgEffect": "colorPulse",
+      "sfx": "deflate"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "주변에 사람이 항상 많은데 다 얕은 관계. 불이 뜨거우니까 가까이 가면 데임.",
+        "en": "They are always surrounded, but the bonds stay shallow. Fire burns brightest up close.",
+        "ja": "周りに人は多いのに関係は浅くなりがち。火は近づくほど熱いからです。"
+      },
+      "number": 3,
+      "title": "사람은 많은데... 다 얕은 관계",
+      "titleAnimation": "fadeInSlow",
+      "highlightWord": "얕은 관계",
+      "icon": "campfire_alone",
+      "iconAnimation": "fadeInDim",
+      "bgEffect": "darken",
+      "moodShift": "melancholy",
+      "sfx": "silence"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 진짜 위기 오면 제일 먼저 뛰어듦. 불은 어둠 속에서 제일 빛나니까.",
+        "en": "But when real danger arrives, they move first. Fire shines hardest in the dark.",
+        "ja": "でも本当の危機では真っ先に飛び込みます。火は暗闇でこそ一番輝くからです。"
+      },
+      "number": 4,
+      "title": "위기엔 제일 먼저 뛰어듦",
+      "titleAnimation": "lightUpCharByChar",
+      "icon": "hero_flame",
+      "iconAnimation": "growIlluminate",
+      "bgEffect": "darkToLight",
+      "moodShift": "epic",
+      "sfx": "epicGong"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나의 사주에 불이 몇 개일까?",
+        "en": "How much fire is in your chart?",
+        "ja": "あなたの四柱には火がいくつありますか。"
+      },
+      "question": "나의 사주에 불이 몇 개?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "불",
+      "gaugeRange": [
+        0,
+        5
+      ],
+      "ctaUrl": "fortunlab.store",
+      "ctaAnimation": "popInBounce",
+      "lottie": "fire",
+      "sfx": "chime"
+    }
+  ],
+  "hashtags": {
+    "ko": [
+      "#사주",
+      "#오행",
+      "#불많은사람",
+      "#사주특징",
+      "#MBTI사주"
+    ],
+    "en": [
+      "#astrology",
+      "#fire",
+      "#personality",
+      "#fiveelements"
+    ]
+  }
+}

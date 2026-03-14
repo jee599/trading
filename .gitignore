@@ -19,3 +19,8 @@
 *.opendb
 *.VC.db
 .vs/
+shorts/node_modules/
+shorts/output/
+shorts/.remotion/
+shorts/dist/
+shorts/*.log

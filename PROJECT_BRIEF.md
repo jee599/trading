@@ -2,57 +2,55 @@
 
 ## Project Name
 
-- `BLEND IN`
+- `saju-shorts`
 
 ## Goal
 
-- Build a mobile-first Unity prototype where the player hides among 100 AI citizens in a small city by mimicking daily routines, completing small social actions, and avoiding detection by AI Hunters.
+- Build a zero-cost, CPU-friendly automation workspace that turns one storyboard JSON file into a vertical short-form MP4 using Remotion, optional local or free TTS, subtitle generation, and FFmpeg finishing.
 
 ## Success Criteria
 
-- The prototype delivers a full 3 to 5 minute session with a readable day flow from 08:00 to 20:00.
-- Citizens visibly follow time-based routines strongly enough that the player can observe and imitate them.
-- Suspicion, disguise, and Hunter pressure create sustained stealth tension through the run.
-- The prototype is replayable because archetypes, events, and mission timing create different crowd patterns each session.
-- The mobile target remains practical for a prototype build, with 30 FPS as the operating performance target.
+- A creator can render a 9:16 silent base video from `shorts/props/*.json` with one `remotion render` command.
+- The workspace ships a sample storyboard JSON and a default `SajuShort` composition that renders without paid assets or GPU-specific requirements.
+- The finalize step can generate narration audio, create subtitle timing data, and mux video plus audio plus subtitles into a final MP4 with one script entry point.
+- The implementation remains data-driven so additional saju topics can be created by adding new JSON files instead of editing React code.
+- The project stays practical on a Windows-friendly local setup with Node.js, Python, and FFmpeg.
 
 ## Scope
 
-- Unity 6 LTS plus URP mobile prototype.
-- One small city map with housing, commercial street, plaza, park, office or school, and bus stop zones.
-- One player character with mobile movement and disguise actions.
-- Up to 100 AI citizens driven by schedule data, archetypes, simple social reactions, and a lightweight in-house behavior tree.
-- One or more Hunter agents driven by a state machine and suspicion thresholds.
-- Three initial event types and three initial mission types.
-- HUD for timer, suspicion, mission, disguise count, joystick, and minimap.
+- A top-level `shorts/` workspace using Remotion, TypeScript, and React.
+- Scene-based motion-graphics rendering for hook, trait, emotional, redemption, and CTA beats.
+- Shared motion components for animated text, icon bursts, particles, transitions, countdowns, and gauges.
+- JSON schema and TypeScript validation helpers for storyboard props.
+- Python scripts for TTS selection and subtitle timing generation.
+- A shell-based finalization script and a batch rendering script.
+- Placeholder public assets and sample props sufficient for local rendering.
 
 ## Out of Scope
 
-- Multiplayer or online features.
-- Monetization or live operations.
-- Server-backed progression.
-- Large-scale content pipelines beyond the first city and prototype archetypes.
-- Final animation polish, voice, advanced facial systems, or authored narrative content.
+- Automatic social upload or scheduling integrations.
+- Paid APIs, GPU-only rendering, or cloud infrastructure.
+- A CMS, web dashboard, or hosted backend.
+- Advanced AI-generated art pipelines beyond local JSON-driven video assembly.
 
 ## Constraints
 
-- Budget is zero, so the prototype must use free assets only.
-- The target platform is iOS and Android, so systems must be designed with mobile performance limits in mind.
-- The first version should prefer simple and explainable AI over deep simulation complexity.
-- The full in-game day must map to roughly 180 real seconds.
-- The prototype should stay editor-friendly and data-driven through ScriptableObjects where practical.
+- Total software cost should stay at zero using free or open-source tooling only.
+- The default path should work on CPU rendering without GPU acceleration.
+- The rendered format targets 1080x1920 vertical shorts at 30 FPS by default.
+- The pipeline must support multilingual copy inside the same JSON model.
+- The repository should stay handoff-friendly for sequential agents working on `master`.
 
 ## Key Decisions
 
-- Citizens are built from archetypes plus randomized personality ranges instead of bespoke per-agent authored logic.
-- The behavior stack uses a small custom behavior tree instead of a third-party AI asset.
-- Detection pressure is centralized around a player suspicion score that Hunters interpret through thresholds.
-- The first implementation slice focuses on foundation systems: time flow, citizen schedule data, behavior execution, and spawning.
-- Free modular characters and low-poly city assets are the baseline content assumption.
+- Keep the render layer declarative through a single storyboard JSON contract per short.
+- Use Remotion for layout, motion, and MP4 generation instead of game-engine or canvas tooling.
+- Keep scene styling thematic and reusable through centralized theme tokens and font mapping.
+- Prefer optional assets and graceful fallbacks so the sample render works even before custom fonts, Lottie files, or BGM are added.
+- Treat TTS, subtitles, and muxing as separate post-render steps so each layer can be swapped independently.
 
 ## Open Questions
 
-- Exact camera model and touch control feel still need playtest validation.
-- The final suspicion balance numbers will need iteration after Hunter and event systems are wired together.
-- The first map layout exists only as a paper design and must still be assembled in the Unity editor.
-- Animation controller structure and which Mixamo clips become required defaults are not finalized yet.
+- Which exact free TTS voices should be the defaults per language once the user validates quality preferences.
+- Whether the batch workflow should prioritize Bash compatibility only or also ship a first-class PowerShell wrapper.
+- How strict the JSON schema should become for future automation-generated props validation.
