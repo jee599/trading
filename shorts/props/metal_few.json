@@ -1,0 +1,138 @@
+{
+  "id": "metal_few_001",
+  "title": {
+    "ko": "사주에 금이 없는 사람 특징",
+    "en": "People with NO Metal in their chart",
+    "ja": "四柱に金がない人の特徴"
+  },
+  "theme": {
+    "bg": ["#1a1010", "#6B4423", "#A0522D"],
+    "accent": "#DEB887",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "rust"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "사주에 금이 없는 사람 특징",
+        "en": "Traits of people with no metal in their chart",
+        "ja": "四柱に金がない人の特徴、心当たりある？"
+      },
+      "text": "사주에 금이 없는 사람 특징",
+      "textAnimation": "rustReveal",
+      "lottie": "rust_dissolve",
+      "lottiePosition": "center",
+      "cameraEffect": "slowZoomIn",
+      "bgEffect": "dustFloat",
+      "sfx": "metalCreak"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "결단력이 제로. 메뉴판 앞에서 삼십분. 넷플릭스 뭐 볼지 고르다가 잠듦. 인생 최대 고민이 점심 메뉴.",
+        "en": "Zero decisiveness. Thirty minutes staring at the menu. Falls asleep choosing what to watch on Netflix. Biggest life dilemma is lunch.",
+        "ja": "決断力ゼロ。メニューの前で三十分。ネットフリックス選んでるうちに寝落ち。人生最大の悩みが昼飯。"
+      },
+      "number": 1,
+      "title": "결단력 = 존재하지 않음",
+      "titleAnimation": "slideInLeft",
+      "icon": "spinning_arrows",
+      "iconAnimation": "endlessSpin",
+      "counter": { "label": "고민 중...", "from": 0, "to": 30, "suffix": "분", "speed": "fast" },
+      "bgEffect": "clockSpin",
+      "sfx": "tickTock"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "노 를 못 함. 부탁 받으면 일단 네 하고 봄. 그래서 항상 일이 넘침. 본인 시간은 없음.",
+        "en": "Cannot say no. Gets asked a favor and automatically says yes. Always overloaded with work. Zero personal time.",
+        "ja": "ノーが言えない。頼まれたらとりあえずイエス。だからいつも仕事が溢れてる。自分の時間ゼロ。"
+      },
+      "number": 2,
+      "title": "거절 불가 체질",
+      "titleAnimation": "popIn",
+      "icon": "yes_stamp",
+      "iconAnimation": "stampRepeat",
+      "stampCount": 5,
+      "bgEffect": "paperStack",
+      "sfx": "stampThud"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "정리정돈을 못 함. 방이 항상 창의적인 상태. 본인은 다 어디 있는지 안다고 하는데 거짓말임.",
+        "en": "Cannot organize anything. Room is always in a creative state. Claims to know where everything is. That's a lie.",
+        "ja": "整理整頓ができない。部屋がいつもクリエイティブな状態。全部どこにあるか分かるって言うけど嘘。"
+      },
+      "number": 3,
+      "title": "방 상태 = 창의적 (거짓말)",
+      "titleAnimation": "messyReveal",
+      "highlightWord": "거짓말",
+      "highlightColor": "#FF6347",
+      "icon": "messy_room",
+      "iconAnimation": "itemsScatter",
+      "bgEffect": "clutterExpand",
+      "moodShift": "comedic",
+      "sfx": "thingsDropping"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 공감 능력이 미침. 남의 감정을 귀신같이 읽음. 금이 없으니까 날카로움 대신 부드러움이 무기.",
+        "en": "But their empathy is insane. Reads people's emotions like a psychic. No metal means softness becomes the weapon instead of sharpness.",
+        "ja": "でも共感能力がヤバい。人の感情を鬼のように読む。金がないから鋭さの代わりに柔らかさが武器。"
+      },
+      "number": 4,
+      "title": "공감 능력 = 초능력",
+      "titleAnimation": "warmGlow",
+      "icon": "heart_radar",
+      "iconAnimation": "pulseExpand",
+      "bgEffect": "warmGradient",
+      "moodShift": "wholesome",
+      "sfx": "warmPad"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나의 사주에 금이 몇 개일까?",
+        "en": "How much metal is in your chart?",
+        "ja": "あなたの四柱に金はいくつ？"
+      },
+      "question": "나의 사주에 금이 몇 개?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "⚙️",
+      "gaugeRange": [0, 5],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "gearSpin",
+      "lottie": "gear",
+      "sfx": "chime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#사주", "#오행", "#금없는사주", "#성격", "#결정장애", "#사주특징"],
+    "en": ["#astrology", "#metal", "#personality", "#indecisive"],
+    "ja": ["#四柱推命", "#金がない", "#優柔不断", "#性格"]
+  }
+}

@@ -2,22 +2,24 @@
   "id": "fire_many_001",
   "title": {
     "ko": "사주에 불이 많은 사람 특징",
-    "en": "People with too much Fire",
-    "ja": "四柱に火が多い人の特徴"
+    "en": "People with too much Fire in their chart",
+    "ja": "四柱に火が多い人の特徴",
+    "hi": "जिनकी कुंडली में अग्नि अधिक हो",
+    "th": "คนที่มีธาตุไฟเยอะ",
+    "vi": "Người có nhiều Hỏa trong tử vi",
+    "id": "Ciri orang yang banyak elemen Api"
   },
   "theme": {
-    "bg": [
-      "#1a0808",
-      "#6b1515",
-      "#b8372a"
-    ],
-    "accent": "#ffd700",
-    "textColor": "#ffffff"
+    "bg": ["#1a0808", "#6B1515", "#B8372A"],
+    "accent": "#FFD700",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "fire"
   },
   "totalDurationFrames": 660,
   "fps": 30,
   "width": 1080,
   "height": 1920,
+
   "scenes": [
     {
       "type": "hook",
@@ -25,15 +27,21 @@
       "durationFrames": 90,
       "tts": {
         "ko": "사주에 불이 많은 사람 특징",
-        "en": "Traits of people with too much fire",
-        "ja": "四柱に火が多い人の特徴です"
+        "en": "Traits of people with too much fire in their chart",
+        "ja": "四柱に火が多い人の特徴、当てはまるかチェック",
+        "hi": "जिनकी कुंडली में अग्नि तत्व ज़्यादा हो उनकी पहचान",
+        "th": "ลักษณะของคนที่มีธาตุไฟเยอะในดวง",
+        "vi": "Đặc điểm người có nhiều Hỏa trong lá số tử vi",
+        "id": "Ciri-ciri orang yang banyak elemen Api di horoskopnya"
       },
       "text": "사주에 불이 많은 사람 특징",
       "textAnimation": "charByCharFire",
       "lottie": "fire",
       "lottiePosition": "center",
+      "lottieScale": 1.2,
       "cameraEffect": "zoomOut",
-      "sfx": "whoosh"
+      "bgEffect": "particleRise",
+      "sfx": "fireBurst"
     },
     {
       "type": "trait",
@@ -41,31 +49,41 @@
       "durationFrames": 120,
       "tts": {
         "ko": "한번 빡치면 자기도 못 멈춤. 회의 중에 반대 의견 나오면 눈에서 불이 남.",
-        "en": "Once they snap, even they cannot stop. One opposing opinion and their eyes are on fire.",
-        "ja": "一度火がつくと自分でも止められません。反対意見が出ると目に火がつきます。"
+        "en": "Once they snap, even they can't stop themselves. Someone disagrees in a meeting? Eyes literally on fire.",
+        "ja": "一度キレたら自分でも止められない。会議で反対意見が出ると目から火が出る。",
+        "hi": "एक बार गुस्सा आ गया तो खुद भी नहीं रोक पाते। मीटिंग में कोई असहमत हो तो आँखों से आग निकलती है।",
+        "th": "พอโกรธแล้วตัวเองก็หยุดไม่ได้ ประชุมอยู่มีคนค้าน ไฟลุกจากตาเลย",
+        "vi": "Một khi đã nổi nóng thì chính mình cũng không dừng được. Ai phản đối trong cuộc họp là mắt bốc lửa luôn.",
+        "id": "Sekali marah, diri sendiri pun nggak bisa berhenti. Ada yang nggak setuju di rapat? Matanya langsung berapi-api."
       },
       "number": 1,
       "title": "한번 빡치면 못 멈춤",
       "titleAnimation": "slideInLeft",
       "icon": "fire_eyes",
-      "iconAnimation": "popBounce",
+      "iconAnimation": "popShake",
       "bgEffect": "screenShake",
-      "sfx": "slam"
+      "bgEffectStartFrame": 40,
+      "sfx": "tableSlam"
     },
     {
       "type": "trait",
       "startFrame": 210,
       "durationFrames": 120,
       "tts": {
-        "ko": "열정은 미쳤는데 3일을 못 감. 월요일에 이번엔 진짜. 수요일에 이미 새거 시작.",
-        "en": "Their passion is wild, but it rarely lasts three days. Monday is a new era, Wednesday is already a new project.",
-        "ja": "情熱はすごいのに三日続きません。月曜に決意して、水曜にはもう別のことを始めています。"
+        "ko": "열정은 미쳤는데 삼일을 못 감. 월요일에 이번엔 진짜 한다! 수요일에 이미 새로운 거 시작함.",
+        "en": "Insane passion, but can't last three days. Monday: this time for real! Wednesday: already started something new.",
+        "ja": "情熱はヤバいけど三日持たない。月曜は今回はマジ、水曜にはもう新しいこと始めてる。",
+        "hi": "जुनून तो पागल है लेकिन तीन दिन नहीं चलता। सोमवार को इस बार पक्का! बुधवार को नई चीज़ शुरू।",
+        "th": "แพชชั่นบ้ามาก แต่อยู่ได้ไม่เกินสามวัน จันทร์บอกครั้งนี้จริง พุธเริ่มอย่างใหม่แล้ว",
+        "vi": "Đam mê cực kỳ mãnh liệt nhưng không quá ba ngày. Thứ hai hô lần này thật, thứ tư đã bắt đầu thứ mới.",
+        "id": "Passion gila tapi nggak bertahan tiga hari. Senin bilang kali ini serius! Rabu sudah mulai yang baru."
       },
       "number": 2,
       "title": "열정 MAX... 3일 한계",
       "titleAnimation": "popIn",
-      "icon": "calendar_countdown",
+      "icon": "calendar",
       "iconAnimation": "countdown321",
+      "countdownLabels": ["MON", "TUE", "WED"],
       "bgEffect": "colorPulse",
       "sfx": "deflate"
     },
@@ -74,33 +92,42 @@
       "startFrame": 330,
       "durationFrames": 120,
       "tts": {
-        "ko": "주변에 사람이 항상 많은데 다 얕은 관계. 불이 뜨거우니까 가까이 가면 데임.",
-        "en": "They are always surrounded, but the bonds stay shallow. Fire burns brightest up close.",
-        "ja": "周りに人は多いのに関係は浅くなりがち。火は近づくほど熱いからです。"
+        "ko": "주변에 사람이 항상 많은데 다 얕은 관계. 불이 뜨거우니까 사람들이 모이긴 하는데 너무 가까이 가면 데임.",
+        "en": "Always surrounded by people, but all shallow connections. Fire attracts, but get too close and you get burned.",
+        "ja": "周りにいつも人が多いけど全部浅い関係。火は人を引きつけるけど近づきすぎるとやけどする。",
+        "hi": "हमेशा लोगों से घिरे रहते हैं लेकिन सब सतही रिश्ते। आग आकर्षित करती है लेकिन पास जाओ तो जलते हो।",
+        "th": "รอบตัวมีคนเยอะแต่ทุกความสัมพันธ์ตื้น ไฟมันดึงดูดคน แต่เข้าใกล้เกินก็โดนลวก",
+        "vi": "Xung quanh lúc nào cũng đông người nhưng toàn quan hệ nông. Lửa thu hút nhưng đến gần quá thì bỏng.",
+        "id": "Selalu dikelilingi orang tapi semua hubungan dangkal. Api memang menarik, tapi terlalu dekat ya terbakar."
       },
       "number": 3,
       "title": "사람은 많은데... 다 얕은 관계",
       "titleAnimation": "fadeInSlow",
       "highlightWord": "얕은 관계",
-      "icon": "campfire_alone",
-      "iconAnimation": "fadeInDim",
+      "highlightColor": "#FFD700",
+      "icon": "campfire",
+      "iconAnimation": "fadeInGlow",
       "bgEffect": "darken",
       "moodShift": "melancholy",
-      "sfx": "silence"
+      "sfx": "fireplaceCrackle"
     },
     {
       "type": "redemption",
       "startFrame": 450,
       "durationFrames": 120,
       "tts": {
-        "ko": "근데 진짜 위기 오면 제일 먼저 뛰어듦. 불은 어둠 속에서 제일 빛나니까.",
-        "en": "But when real danger arrives, they move first. Fire shines hardest in the dark.",
-        "ja": "でも本当の危機では真っ先に飛び込みます。火は暗闇でこそ一番輝くからです。"
+        "ko": "근데 진짜 위기 오면 제일 먼저 뛰어듦. 불은 원래 어둠 속에서 제일 빛나는 거니까.",
+        "en": "But when a real crisis hits, they jump in first. Fire was always meant to shine brightest in the dark.",
+        "ja": "でも本当の危機が来たら一番に飛び込む。火は暗闇の中で一番輝くものだから。",
+        "hi": "लेकिन असली संकट आए तो सबसे पहले कूदते हैं। आग अंधेरे में सबसे ज़्यादा चमकती है।",
+        "th": "แต่พอวิกฤตจริงมา กระโดดเข้าไปก่อนเลย เพราะไฟมันสว่างที่สุดในความมืด",
+        "vi": "Nhưng khi khủng hoảng thật thì lao vào đầu tiên. Lửa vốn tỏa sáng nhất trong bóng tối.",
+        "id": "Tapi saat krisis nyata, mereka yang pertama maju. Api memang paling terang dalam kegelapan."
       },
       "number": 4,
       "title": "위기엔 제일 먼저 뛰어듦",
       "titleAnimation": "lightUpCharByChar",
-      "icon": "hero_flame",
+      "icon": "heroFlame",
       "iconAnimation": "growIlluminate",
       "bgEffect": "darkToLight",
       "moodShift": "epic",
@@ -113,34 +140,32 @@
       "tts": {
         "ko": "나의 사주에 불이 몇 개일까?",
         "en": "How much fire is in your chart?",
-        "ja": "あなたの四柱には火がいくつありますか。"
+        "ja": "あなたの四柱に火はいくつ？",
+        "hi": "आपकी कुंडली में अग्नि कितनी है?",
+        "th": "ในดวงคุณมีธาตุไฟกี่ตัว?",
+        "vi": "Trong tử vi bạn có bao nhiêu Hỏa?",
+        "id": "Berapa banyak Api di horoskop kamu?"
       },
       "question": "나의 사주에 불이 몇 개?",
       "questionAnimation": "bounceIn",
-      "gaugeLabel": "불",
-      "gaugeRange": [
-        0,
-        5
-      ],
+      "gaugeLabel": "🔥",
+      "gaugeRange": [0, 5],
+      "gaugeDisplay": "???",
       "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
       "ctaAnimation": "popInBounce",
       "lottie": "fire",
       "sfx": "chime"
     }
   ],
+
   "hashtags": {
-    "ko": [
-      "#사주",
-      "#오행",
-      "#불많은사람",
-      "#사주특징",
-      "#MBTI사주"
-    ],
-    "en": [
-      "#astrology",
-      "#fire",
-      "#personality",
-      "#fiveelements"
-    ]
+    "ko": ["#사주", "#오행", "#불많은사람", "#사주특징", "#MBTI사주버전"],
+    "en": ["#astrology", "#fire", "#personality", "#fiveelements", "#sajutest"],
+    "ja": ["#四柱推命", "#五行", "#火の人", "#性格診断"],
+    "hi": ["#ज्योतिष", "#पंचतत्व", "#अग्नि", "#व्यक्तित्व"],
+    "th": ["#ดวง", "#ธาตุไฟ", "#นิสัย", "#ดูดวง"],
+    "vi": ["#tửvi", "#ngũhành", "#mệnhHỏa", "#tínhcách"],
+    "id": ["#ramalan", "#elemenApi", "#kepribadian", "#horoskop"]
   }
 }

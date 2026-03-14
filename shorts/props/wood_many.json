@@ -1,0 +1,136 @@
+{
+  "id": "wood_many_001",
+  "title": {
+    "ko": "사주에 나무가 많은 사람 특징",
+    "en": "People with too much Wood in their chart",
+    "ja": "四柱に木が多い人の特徴"
+  },
+  "theme": {
+    "bg": ["#0a1f0a", "#2D5016", "#4CAF50"],
+    "accent": "#90EE90",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "nature"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "사주에 나무가 많은 사람 특징",
+        "en": "Traits of people with too much wood in their chart",
+        "ja": "四柱に木が多い人の特徴、あなたは？"
+      },
+      "text": "사주에 나무가 많은 사람 특징",
+      "textAnimation": "growFromSeed",
+      "lottie": "growing_tree",
+      "lottiePosition": "center",
+      "cameraEffect": "tiltUp",
+      "bgEffect": "leafFall",
+      "sfx": "natureAmbient"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "뭐든 시작은 잘하는데 가지를 너무 많이 침. 투잡 쓰리잡은 기본이고 취미도 열다섯 개. 근데 다 중간임.",
+        "en": "Great at starting things but too many branches. Two three side jobs are basic plus fifteen hobbies. All half finished though.",
+        "ja": "何でも始めるのは上手だけど枝が多すぎ。副業二つ三つは基本で趣味も十五個。でも全部中途半端。"
+      },
+      "number": 1,
+      "title": "가지치기를 모르는 사람",
+      "titleAnimation": "branchGrow",
+      "icon": "tree_branches",
+      "iconAnimation": "branchesSpread",
+      "bgEffect": "none",
+      "sfx": "branchSnap"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "정의감이 미쳤음. 불의를 보면 참지 못함. 본인이 손해 봐도 끼어듦. 근데 가끔 오지랖이라는 소리 들음.",
+        "en": "Insane sense of justice. Cannot tolerate unfairness. Even at personal cost they step in. Sometimes called a busybody though.",
+        "ja": "正義感がヤバい。不正を見たら我慢できない。自分が損しても首を突っ込む。でもたまにおせっかいって言われる。"
+      },
+      "number": 2,
+      "title": "정의의 용사 (오지랖 포함)",
+      "titleAnimation": "slideInLeft",
+      "icon": "shield_justice",
+      "iconAnimation": "popBounce",
+      "bgEffect": "heroicGlow",
+      "sfx": "swordDraw"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "고집이 나무뿌리급. 한번 박히면 안 뽑힘. 부모님도 포기한 고집. 근데 본인은 소신이라고 생각함.",
+        "en": "Stubbornness at tree root level. Once planted cannot be pulled out. Even parents gave up. But they think it's conviction.",
+        "ja": "頑固さが木の根レベル。一度はまったら抜けない。親も諦めた頑固さ。でも本人は信念だと思ってる。"
+      },
+      "number": 3,
+      "title": "고집 = 나무뿌리 (안 뽑힘)",
+      "titleAnimation": "fadeInSlow",
+      "highlightWord": "안 뽑힘",
+      "highlightColor": "#90EE90",
+      "icon": "tree_roots",
+      "iconAnimation": "rootsGrow",
+      "bgEffect": "earthShake",
+      "moodShift": "stubborn",
+      "sfx": "deepRumble"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 성장 속도가 무서움. 작년의 나와 올해의 내가 완전 다른 사람. 나무는 원래 계속 자라는 거니까.",
+        "en": "But their growth speed is scary. Last year's them and this year's them are completely different people. Trees are meant to keep growing.",
+        "ja": "でも成長速度が怖い。去年の自分と今年の自分が完全に別人。木はもともと成長し続けるもの。"
+      },
+      "number": 4,
+      "title": "성장 속도가 무서움",
+      "titleAnimation": "growUpReveal",
+      "icon": "growth_chart",
+      "iconAnimation": "rocketGrow",
+      "bgEffect": "seasonTimelapse",
+      "moodShift": "inspiring",
+      "sfx": "upwardWhoosh"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나의 사주에 나무가 몇 개일까?",
+        "en": "How much wood is in your chart?",
+        "ja": "あなたの四柱に木はいくつ？"
+      },
+      "question": "나의 사주에 나무가 몇 개?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "🌳",
+      "gaugeRange": [0, 5],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "leafBurst",
+      "lottie": "growing_tree",
+      "sfx": "chime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#사주", "#오행", "#나무많은사주", "#성격", "#사주특징"],
+    "en": ["#astrology", "#wood", "#personality", "#fiveelements"],
+    "ja": ["#四柱推命", "#木の人", "#性格", "#五行"]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "byung_daymaster_001",
+  "title": {
+    "ko": "병화 일간 특징",
+    "en": "Byung Fire daymaster traits",
+    "ja": "丙火の日干の特徴"
+  },
+  "theme": {
+    "bg": ["#1a0a00", "#CC5500", "#FF8C00"],
+    "accent": "#FFDD44",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "sun"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "병화 일간 특징. 태양 그 자체인 사람.",
+        "en": "Byung Fire daymaster traits. The person who is literally the sun.",
+        "ja": "丙火の日干の特徴。太陽そのものの人。"
+      },
+      "text": "병화 일간 = 태양",
+      "textAnimation": "sunriseReveal",
+      "lottie": "sunrise",
+      "lottiePosition": "center",
+      "cameraEffect": "warmZoomOut",
+      "bgEffect": "sunRays",
+      "sfx": "morningChime"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "존재감이 방 안의 태양. 어디를 가든 시선이 모임. 본인은 그냥 숨 쉬고 있을 뿐인데 주목받음.",
+        "en": "Presence like the sun in a room. Everywhere they go, eyes follow. They're just breathing but getting all the attention.",
+        "ja": "存在感が部屋の中の太陽。どこに行っても視線が集まる。本人はただ呼吸してるだけなのに注目される。"
+      },
+      "number": 1,
+      "title": "존재감 = 태양",
+      "titleAnimation": "glowReveal",
+      "icon": "spotlight",
+      "iconAnimation": "lightExpand",
+      "bgEffect": "warmPulse",
+      "sfx": "lightUp"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "배려심이 넓음. 모든 사람한테 따뜻함. 근데 문제는 특별히 좋아하는 사람한테도 똑같아서 상대가 헷갈림.",
+        "en": "Incredibly warm to everyone. Problem is they treat the person they like the same way. So that person gets confused.",
+        "ja": "みんなに優しい。でも問題は好きな人にも同じ態度だから相手が混乱する。"
+      },
+      "number": 2,
+      "title": "모두에게 따뜻 = 썸 상대 혼란",
+      "titleAnimation": "slideInLeft",
+      "icon": "sun_rays_people",
+      "iconAnimation": "raysToAll",
+      "bgEffect": "warmEverywhere",
+      "sfx": "confusedBeep"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "밤이 오면 급격히 약해짐. 낮에는 태양인데 혼자 있는 밤에는 우울해짐. 태양도 질 때가 있으니까.",
+        "en": "When night comes they get suddenly weak. They are the sun by day but get depressed alone at night. Even the sun sets.",
+        "ja": "夜になると急に弱くなる。昼は太陽なのに夜一人でいると落ち込む。太陽も沈む時がある。"
+      },
+      "number": 3,
+      "title": "낮엔 태양, 밤엔 우울",
+      "titleAnimation": "fadeInSlow",
+      "highlightWord": "우울",
+      "highlightColor": "#6B5B95",
+      "icon": "sunset",
+      "iconAnimation": "sunsetFade",
+      "bgEffect": "dayToNight",
+      "moodShift": "melancholy",
+      "sfx": "nightAmbient"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 다시 아침이 오면 또 빛남. 어떤 어둠이 와도 결국 떠오르는 게 태양이니까. 리셋 능력 최강.",
+        "en": "But when morning comes they shine again. No matter what darkness comes the sun always rises. Reset ability is unmatched.",
+        "ja": "でもまた朝が来たら輝く。どんな闇が来ても結局昇るのが太陽。リセット能力最強。"
+      },
+      "number": 4,
+      "title": "어둠 뒤에 반드시 뜸",
+      "titleAnimation": "sunriseReveal",
+      "icon": "sunrise_hero",
+      "iconAnimation": "riseGlow",
+      "bgEffect": "nightToDay",
+      "moodShift": "hopeful",
+      "sfx": "uplifting"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나의 일간이 뭘까?",
+        "en": "What is your daymaster?",
+        "ja": "あなたの日干は何？"
+      },
+      "question": "나의 일간이 뭘까?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "☀️",
+      "gaugeRange": ["갑", "을", "병", "정", "무", "기", "경", "신", "임", "계"],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "sunBurst",
+      "lottie": "sunrise",
+      "sfx": "chime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#병화", "#일간", "#사주", "#태양", "#병화일간", "#사주특징"],
+    "en": ["#daymaster", "#astrology", "#fire", "#sun", "#personality"],
+    "ja": ["#丙火", "#日干", "#四柱推命", "#太陽", "#性格"]
+  }
+}

@@ -20,6 +20,8 @@ npx remotion render SajuShort output/fire_many_ko.mp4 --props=props/fire_many.js
 ## Notes
 
 - 샘플 영상은 `props/fire_many.json`을 기준으로 렌더링됩니다.
+- 제공받은 스토리보드 기준 문서는 `SHORTS_PIPELINE_REMOTION_FINAL.md`에 보관했습니다.
+- 현재 포함된 스토리보드 샘플은 `fire_many`, `water_few`, `wood_many`, `metal_few`, `dohwa`, `yeokma`, `gwaegang`, `byung_daymaster`입니다.
 - `finalize.sh`는 `python`, `ffmpeg`, 그리고 선택적으로 `edge-tts`, `requests`, `whisper-timestamped`를 사용합니다.
 - Windows PowerShell 환경에서는 `finalize.ps1`과 `scripts/batch.ps1`을 사용할 수 있습니다.
 - `KOKORO_URL` 환경 변수를 설정하면 ko/en/ja/hi 언어에서 Kokoro HTTP 엔드포인트를 먼저 시도합니다.

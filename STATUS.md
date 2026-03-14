@@ -6,15 +6,15 @@
 
 ## Current Task
 
-- Deliver the first working `shorts/` workspace handoff, including verified render and finalize paths for the sample saju short.
+- Apply the provided finalized Remotion pipeline reference and import the supplied storyboard JSON files into the `shorts/` workspace.
 
 ## Working Session
 
 - Agent: GPT
 - Version: GPT-5 Codex
 - Started At: 2026-03-14
-- Scope: Repository pivot to `shorts/`, including docs, render code, sample assets, and verification
-- Expected Output: `shorts/` contains a working Remotion-based saju shorts pipeline and at least one verified sample render path
+- Scope: Align the `shorts/` workspace with the provided finalized pipeline spec and add the supplied storyboard JSON set
+- Expected Output: The provided pipeline reference is reflected where needed in code/docs and the supplied JSON files are usable under `shorts/props`
 
 ## Done
 
@@ -28,13 +28,20 @@
 - Verified `npm run typecheck` passes in `shorts/`.
 - Verified sample render output with `npx remotion render SajuShort output/fire_many_ko.mp4 --props=props/fire_many.json`.
 - Verified finalization output with `powershell -ExecutionPolicy Bypass -File .\\finalize.ps1 output/fire_many_ko.mp4 props/fire_many.json ko`.
+- Imported the provided reference file as `shorts/SHORTS_PIPELINE_REMOTION_FINAL.md`.
+- Replaced the broken sample storyboard text with the provided UTF-8 JSON source files under `shorts/props`.
+- Added the provided storyboard set: `byung_daymaster`, `dohwa`, `fire_many`, `gwaegang`, `metal_few`, `water_few`, `wood_many`, and `yeokma`.
+- Relaxed the JSON animation schema so the supplied finalized storyboard variants are accepted without parse failures.
+- Added broader animation fallbacks and icon keyword mapping so the new storyboard set renders meaningfully even when a motion name is not custom-implemented yet.
+- Verified an imported storyboard render with `npx remotion render SajuShort output/water_few_ko.mp4 --props=props/water_few.json`.
+- Verified imported-storyboard finalization with `powershell -ExecutionPolicy Bypass -File .\\finalize.ps1 output/water_few_ko.mp4 props/water_few.json ko`.
 
 ## Next
 
-- Add more storyboard JSON files for the broader saju content catalog beyond `fire_many`.
+- Continue filling out the remaining saju catalog beyond the eight imported storyboard files.
 - Drop real branded fonts, optional Lottie files, and royalty-free BGM into `shorts/public` to replace the current graceful fallbacks.
 - Decide whether Whisper alignment should become the default subtitle mode once the local install cost is acceptable.
-- Consider cleaning up the now-empty legacy root folders if the team wants the filesystem itself to be as minimal as the git history.
+- Implement richer per-animation variants for the newly allowed storyboard motion names if higher visual fidelity is needed.
 
 ## Remaining
 
@@ -50,6 +57,8 @@
 - Repository direction pivoted from a Unity prototype to a Remotion-based shorts automation workspace.
 - `PROJECT_BRIEF.md` and `ARCHITECTURE.md` were rewritten for the new pipeline.
 - The sample pipeline now renders and finalizes a Korean `fire_many` short end to end inside `shorts/`.
+- The provided finalized pipeline reference and eight storyboard JSON files were imported into `shorts/`.
+- The renderer now accepts wider animation-name inputs from automation-generated storyboard files.
 
 ## Notes for Next Agent
 
@@ -58,6 +67,8 @@
 - Preserve zero-cost, CPU-friendly defaults and graceful fallbacks when optional media assets are missing.
 - `finalize.sh` matches the requested Bash workflow, but the current machine does not have `bash`, so `finalize.ps1` was added and used for real verification.
 - Remotion required `zod` version `4.3.6`; the package versions are now pinned to avoid future mismatch warnings.
+- The provided JSON set introduced many more animation labels than the first sample; the schema now accepts free-form names and `AnimatedText` falls back heuristically for unknown variants.
+- `shorts/SHORTS_PIPELINE_REMOTION_FINAL.md` is the imported reference document that matches the user's supplied pipeline write-up.
 - Update `Done`, `Next`, `Blocked`, and `Agent Contribution` again before ending the task.
 
 ## Agent Contribution
@@ -66,14 +77,14 @@
 
 | Agent | Version | Scope | Key Contribution | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | Full repository pivot to the `shorts/` Remotion pipeline | Replaced the Unity codebase with a working saju shorts workspace, post-processing scripts, docs, and verification | 100% |
+| GPT | GPT-5 Codex | Integrate supplied finalized pipeline assets and storyboard set | Imported the provided reference and eight JSONs, widened schema compatibility, and re-verified render/finalize paths | 100% |
 | Claude | | | | |
 
 ### Cumulative
 
 | Agent | Version | Tasks Completed | Key Areas | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | 8 | Workflow rules, repo docs, status tracking, Unity scaffold, repository pivot, Remotion pipeline, render automation, and verification | 100% |
+| GPT | GPT-5 Codex | 9 | Workflow rules, repo docs, status tracking, Unity scaffold, repository pivot, Remotion pipeline, storyboard import, render automation, and verification | 100% |
 | Claude | | | | |
 
 Contribution values are rough operational notes, not exact metrics.

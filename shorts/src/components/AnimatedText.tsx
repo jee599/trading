@@ -43,6 +43,10 @@ const renderHighlighted = (
   });
 };
 
+const normalizeAnimation = (animation: string) => {
+  return animation.toLowerCase().replace(/\s+/g, "");
+};
+
 export const AnimatedText = ({
   text,
   animation,
@@ -52,8 +56,15 @@ export const AnimatedText = ({
   highlightWord,
   highlightColor,
 }: AnimatedTextProps) => {
-  if (animation === "charByCharFire" || animation === "lightUpCharByChar") {
-    const isLight = animation === "lightUpCharByChar";
+  const normalized = normalizeAnimation(animation);
+
+  if (
+    normalized === "charbycharfire" ||
+    normalized === "lightupcharbychar" ||
+    normalized === "airportflipboard" ||
+    normalized === "lightningreveal"
+  ) {
+    const isLight = normalized === "lightupcharbychar";
 
     return (
       <div style={style}>
@@ -93,8 +104,9 @@ export const AnimatedText = ({
     );
   }
 
-  if (animation === "slideInLeft") {
-    const x = interpolate(frame, [0, 14], [-240, 0], {
+  if (normalized === "slideinleft" || normalized === "slideinright") {
+    const fromRight = normalized === "slideinright";
+    const x = interpolate(frame, [0, 14], [fromRight ? 240 : -240, 0], {
       extrapolateRight: "clamp",
     });
     const opacity = interpolate(frame, [0, 9], [0, 1], {
@@ -108,13 +120,28 @@ export const AnimatedText = ({
     );
   }
 
-  if (animation === "popIn" || animation === "popInBounce") {
+  if (
+    normalized === "popin" ||
+    normalized === "popinbounce" ||
+    normalized.includes("burst") ||
+    normalized.includes("grow") ||
+    normalized.includes("flip") ||
+    normalized.includes("spin") ||
+    normalized.includes("drop") ||
+    normalized.includes("slash") ||
+    normalized.includes("stamp")
+  ) {
+    const bouncy =
+      normalized === "popinbounce" ||
+      normalized.includes("burst") ||
+      normalized.includes("flip") ||
+      normalized.includes("spin");
     const scale = spring({
       frame,
       fps,
       config: {
-        damping: animation === "popInBounce" ? 10 : 28,
-        stiffness: animation === "popInBounce" ? 170 : 120,
+        damping: bouncy ? 10 : 28,
+        stiffness: bouncy ? 170 : 120,
       },
     });
     const opacity = interpolate(frame, [0, 6], [0, 1], {
@@ -128,7 +155,19 @@ export const AnimatedText = ({
     );
   }
 
-  if (animation === "fadeInSlow") {
+  if (
+    normalized === "fadeinslow" ||
+    normalized.includes("fade") ||
+    normalized.includes("reveal") ||
+    normalized.includes("glow") ||
+    normalized.includes("warm") ||
+    normalized.includes("cool") ||
+    normalized.includes("wave") ||
+    normalized.includes("split") ||
+    normalized.includes("dreamy") ||
+    normalized.includes("messy") ||
+    normalized.includes("art")
+  ) {
     const opacity = interpolate(frame, [0, 26], [0, 1], {
       extrapolateRight: "clamp",
     });
@@ -143,7 +182,7 @@ export const AnimatedText = ({
     );
   }
 
-  if (animation === "bounceIn") {
+  if (normalized === "bouncein") {
     const scale = spring({
       frame,
       fps,

@@ -1,0 +1,169 @@
+{
+  "id": "water_few_001",
+  "title": {
+    "ko": "사주에 물이 없는 사람 특징",
+    "en": "People with NO Water in their chart",
+    "ja": "四柱に水がない人の特徴",
+    "hi": "जिनकी कुंडली में जल तत्व न हो",
+    "th": "คนที่ไม่มีธาตุน้ำในดวง",
+    "vi": "Người không có Thủy trong tử vi",
+    "id": "Ciri orang yang tidak punya elemen Air"
+  },
+  "theme": {
+    "bg": ["#1a1208", "#8B7355", "#C4956A"],
+    "accent": "#4A90D9",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "desert"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "사주에 물이 없는 사람 특징",
+        "en": "Traits of people with no water in their chart",
+        "ja": "四柱に水がない人の特徴、当てはまる？",
+        "hi": "जिनकी कुंडली में जल तत्व बिल्कुल न हो",
+        "th": "ลักษณะของคนที่ไม่มีธาตุน้ำในดวง",
+        "vi": "Đặc điểm người hoàn toàn không có Thủy trong lá số",
+        "id": "Ciri-ciri orang yang sama sekali tidak punya elemen Air"
+      },
+      "text": "사주에 물이 없는 사람 특징",
+      "textAnimation": "crackReveal",
+      "lottie": "desert_crack",
+      "lottiePosition": "background",
+      "lottieScale": 1.5,
+      "cameraEffect": "slowZoomIn",
+      "bgEffect": "dustParticle",
+      "sfx": "windDry"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "감정 표현 그게 뭔데 먹는 건데? 여자친구가 울어도 왜 울어 논리적으로 설명해봐 이러고 있음.",
+        "en": "Express emotions? What's that, a food? Girlfriend is crying and they're like explain logically why you're upset.",
+        "ja": "感情表現？何それ美味しいの？彼女が泣いてても、なんで泣くの論理的に説明してって言ってる。",
+        "hi": "भावनाएँ व्यक्त करना? वो क्या होता है खाने की चीज़ है? गर्लफ्रेंड रो रही है और ये बोल रहे हैं तर्क से समझाओ।",
+        "th": "แสดงอารมณ์? มันคืออะไร กินได้ไหม? แฟนร้องไห้ก็ถามว่า ทำไมร้อง อธิบายแบบมีเหตุผลสิ",
+        "vi": "Biểu đạt cảm xúc? Cái đó là gì ăn được không? Bạn gái khóc thì bảo giải thích logic đi.",
+        "id": "Ekspresi emosi? Itu apa, bisa dimakan? Pacar nangis dan mereka bilang jelaskan secara logis dong."
+      },
+      "number": 1,
+      "title": "감정 표현 = ERROR 404",
+      "titleAnimation": "glitchReveal",
+      "icon": "error_screen",
+      "iconAnimation": "popBlink",
+      "bgEffect": "staticNoise",
+      "sfx": "errorBeep"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "유연성 제로. 한번 정한 건 절대 안 바꿈. 식당에서 메뉴 바꾸자고 하면 우정 끝남.",
+        "en": "Zero flexibility. Once decided, never changes. Suggest a different restaurant and the friendship is over.",
+        "ja": "柔軟性ゼロ。一度決めたら絶対変えない。店変えようって言ったら友情終了。",
+        "hi": "लचीलापन शून्य। एक बार तय किया तो बदलना नहीं। रेस्तरां बदलने को बोलो तो दोस्ती ख़त्म।",
+        "th": "ยืดหยุ่นเป็นศูนย์ ตัดสินใจแล้วไม่เปลี่ยน บอกเปลี่ยนร้านอาหารมิตรภาพจบ",
+        "vi": "Linh hoạt bằng không. Đã quyết là không đổi. Đề nghị đổi nhà hàng là tình bạn kết thúc.",
+        "id": "Fleksibilitas nol. Sekali putuskan ya nggak berubah. Minta ganti restoran? Pertemanan selesai."
+      },
+      "number": 2,
+      "title": "유연성: 바위 그 자체",
+      "titleAnimation": "slamDown",
+      "icon": "rock",
+      "iconAnimation": "dropHeavy",
+      "bgEffect": "crackExpand",
+      "sfx": "rockSlam"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 한번 울면 대성통곡. 평소엔 사막인데 터지면 쓰나미임. 본인도 당황함.",
+        "en": "But when they finally cry, it's a full tsunami. Usually a desert, but when it breaks even they are shocked.",
+        "ja": "でも一度泣いたら大号泣。普段は砂漠なのに決壊したら津波。本人もびっくり。",
+        "hi": "लेकिन एक बार रोए तो महाप्रलय। आमतौर पर रेगिस्तान लेकिन टूटे तो सुनामी। खुद भी हैरान।",
+        "th": "แต่พอร้องทีเดียวร้องแบบน้ำท่วม ปกติเป็นทะเลทราย พอแตกก็เป็นสึนามิ ตัวเองก็ตกใจ",
+        "vi": "Nhưng khi khóc thì khóc như lũ. Bình thường sa mạc nhưng vỡ đập là sóng thần. Bản thân cũng sốc.",
+        "id": "Tapi kalau nangis, langsung banjir besar. Biasanya gurun, tapi kalau pecah jadi tsunami. Sendiri juga kaget."
+      },
+      "number": 3,
+      "title": "한번 터지면... 쓰나미",
+      "titleAnimation": "waveReveal",
+      "highlightWord": "쓰나미",
+      "highlightColor": "#4A90D9",
+      "icon": "water_flood",
+      "iconAnimation": "overflowBurst",
+      "bgEffect": "desertToOcean",
+      "moodShift": "dramatic",
+      "sfx": "waterTsunami"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "대신 위기에 제일 냉정함. 다 패닉인데 혼자 침착하게 해결함. 물이 없으니까 안 얼거든.",
+        "en": "But in crisis they're the calmest one. Everyone panicking, they're solving it. No water means no freezing up.",
+        "ja": "でも危機には一番冷静。みんなパニックの中一人で解決する。水がないから凍らない。",
+        "hi": "लेकिन संकट में सबसे शांत। सब पैनिक में और ये अकेले हल कर रहे। पानी नहीं तो जमेंगे भी नहीं।",
+        "th": "แต่ตอนวิกฤตเย็นที่สุด ทุกคนแพนิค แต่คนนี้แก้ปัญหาคนเดียวแบบสบาย ไม่มีน้ำก็ไม่แข็ง",
+        "vi": "Nhưng trong khủng hoảng thì bình tĩnh nhất. Ai cũng hoảng loạn, một mình giải quyết. Không có nước nên không đóng băng.",
+        "id": "Tapi saat krisis paling tenang. Semua panik, mereka sendirian menyelesaikan. Nggak ada air jadi nggak beku."
+      },
+      "number": 4,
+      "title": "위기에 제일 냉정 (안 얼거든)",
+      "titleAnimation": "coolFadeIn",
+      "icon": "calm_button",
+      "iconAnimation": "pressResolve",
+      "bgEffect": "chaosToCalm",
+      "moodShift": "confident",
+      "sfx": "buttonClick"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나의 사주에 물이 몇 개일까?",
+        "en": "How much water is in your chart?",
+        "ja": "あなたの四柱に水はいくつ？",
+        "hi": "आपकी कुंडली में जल कितना है?",
+        "th": "ในดวงคุณมีธาตุน้ำกี่ตัว?",
+        "vi": "Trong tử vi bạn có bao nhiêu Thủy?",
+        "id": "Berapa banyak Air di horoskop kamu?"
+      },
+      "question": "나의 사주에 물이 몇 개?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "💧",
+      "gaugeRange": [0, 5],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "dropIntoGlass",
+      "lottie": "water_drop",
+      "sfx": "waterDrop"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#사주", "#오행", "#물없는사주", "#성격테스트", "#사주특징"],
+    "en": ["#astrology", "#water", "#personality", "#fiveelements"],
+    "ja": ["#四柱推命", "#水がない", "#性格", "#五行"],
+    "hi": ["#ज्योतिष", "#जलतत्व", "#व्यक्तित्व"],
+    "th": ["#ดวง", "#ธาตุน้ำ", "#นิสัย"],
+    "vi": ["#tửvi", "#mệnhThủy", "#tínhcách"],
+    "id": ["#ramalan", "#elemenAir", "#kepribadian"]
+  }
+}

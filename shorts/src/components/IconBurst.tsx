@@ -2,12 +2,111 @@ import type {FC} from "react";
 import {AbsoluteFill, interpolate, spring} from "remotion";
 import {Countdown321} from "./Countdown321";
 
-const iconMap: Record<string, string> = {
-  fire: "🔥",
-  fire_eyes: "👀",
-  calendar_countdown: "📅",
-  campfire_alone: "🏕️",
-  hero_flame: "🛡️",
+const resolveIconGlyph = (icon: string) => {
+  const normalized = icon.toLowerCase();
+
+  if (normalized.includes("fire") || normalized.includes("flame")) {
+    return "🔥";
+  }
+
+  if (normalized.includes("water") || normalized.includes("drop")) {
+    return "💧";
+  }
+
+  if (
+    normalized.includes("tree") ||
+    normalized.includes("wood") ||
+    normalized.includes("branch") ||
+    normalized.includes("root")
+  ) {
+    return "🌿";
+  }
+
+  if (
+    normalized.includes("heart") ||
+    normalized.includes("flower") ||
+    normalized.includes("cherry")
+  ) {
+    return "💗";
+  }
+
+  if (normalized.includes("lightning")) {
+    return "⚡";
+  }
+
+  if (normalized.includes("gear")) {
+    return "⚙️";
+  }
+
+  if (normalized.includes("calendar") || normalized.includes("clock")) {
+    return "🗓️";
+  }
+
+  if (normalized.includes("battery")) {
+    return "🔋";
+  }
+
+  if (normalized.includes("airplane")) {
+    return "✈️";
+  }
+
+  if (normalized.includes("map") || normalized.includes("globe")) {
+    return "🧭";
+  }
+
+  if (normalized.includes("sunrise") || normalized.includes("sun")) {
+    return "☀️";
+  }
+
+  if (normalized.includes("sunset")) {
+    return "🌇";
+  }
+
+  if (normalized.includes("shield") || normalized.includes("justice")) {
+    return "🛡️";
+  }
+
+  if (normalized.includes("rock") || normalized.includes("crack")) {
+    return "🪨";
+  }
+
+  if (normalized.includes("chair") || normalized.includes("campfire")) {
+    return "🏕️";
+  }
+
+  if (normalized.includes("crown") || normalized.includes("commander")) {
+    return "👑";
+  }
+
+  if (normalized.includes("palette")) {
+    return "🎨";
+  }
+
+  if (normalized.includes("stamp") || normalized.includes("yes")) {
+    return "✅";
+  }
+
+  if (normalized.includes("moving") || normalized.includes("boxes")) {
+    return "📦";
+  }
+
+  if (normalized.includes("spotlight")) {
+    return "🎭";
+  }
+
+  if (normalized.includes("sparkle")) {
+    return "✨";
+  }
+
+  if (normalized.includes("arrow")) {
+    return "🌀";
+  }
+
+  if (normalized.includes("flood")) {
+    return "🌊";
+  }
+
+  return "✨";
 };
 
 type IconBurstProps = {
@@ -40,7 +139,7 @@ export const IconBurst: FC<IconBurstProps> = ({
   const glow = interpolate(frame, [0, 15, 30], [0.35, 0.9, 0.5], {
     extrapolateRight: "clamp",
   });
-  const iconGlyph = iconMap[icon] ?? "✨";
+  const iconGlyph = resolveIconGlyph(icon);
 
   return (
     <div

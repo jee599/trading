@@ -7,15 +7,7 @@ export const DEFAULT_VIDEO_CONFIG = {
   durationInFrames: 660,
 } as const;
 
-export const textAnimationSchema = z.enum([
-  "slideInLeft",
-  "popIn",
-  "charByCharFire",
-  "fadeInSlow",
-  "lightUpCharByChar",
-  "bounceIn",
-  "popInBounce",
-]);
+export const textAnimationSchema = z.string().min(1);
 
 const localizedTextSchema = z.record(z.string(), z.string());
 
@@ -37,7 +29,7 @@ export const hookSceneSchema = baseSceneSchema.extend({
   text: z.string(),
   textAnimation: textAnimationSchema,
   lottie: z.string().optional(),
-  lottiePosition: z.enum(["center", "top", "bottom"]).optional(),
+  lottiePosition: z.string().optional(),
   cameraEffect: z.string().optional(),
 });
 

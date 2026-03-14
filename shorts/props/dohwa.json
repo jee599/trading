@@ -1,0 +1,167 @@
+{
+  "id": "dohwa_001",
+  "title": {
+    "ko": "도화살 있는 사람 특징",
+    "en": "People with the Peach Blossom star",
+    "ja": "桃花殺がある人の特徴",
+    "hi": "जिनके पास पीच ब्लॉसम स्टार हो",
+    "th": "คนที่มีดาวดอกท้อ",
+    "vi": "Người có sao Đào Hoa",
+    "id": "Ciri orang yang punya bintang Bunga Persik"
+  },
+  "theme": {
+    "bg": ["#1a0510", "#8B2252", "#E75480"],
+    "accent": "#FFB6C1",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "blossom"
+  },
+  "totalDurationFrames": 750,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "도화살 있는 사람 특징",
+        "en": "Signs you have the Peach Blossom star in your chart",
+        "ja": "桃花殺がある人の特徴、あなたは？",
+        "hi": "पीच ब्लॉसम स्टार वाले लोगों की पहचान",
+        "th": "ลักษณะคนที่มีดาวดอกท้อในดวง",
+        "vi": "Đặc điểm người có sao Đào Hoa trong lá số",
+        "id": "Ciri-ciri orang yang punya bintang Bunga Persik"
+      },
+      "text": "도화살 있는 사람 특징",
+      "textAnimation": "petalReveal",
+      "lottie": "cherry_blossom",
+      "lottiePosition": "scatter",
+      "lottieScale": 1.0,
+      "cameraEffect": "softZoomIn",
+      "bgEffect": "petalFall",
+      "sfx": "sparkle"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "본인은 일도 모르는데 이성한테 인기가 미침. 편의점 알바 중에도 번호 받음. 저 그냥 라면 데운 건데요?",
+        "en": "Zero awareness but insanely popular with the opposite gender. Gets phone numbers while working at a convenience store. I just heated up ramen though?",
+        "ja": "本人全然気づいてないのに異性にモテまくる。コンビニバイト中にも番号もらう。ラーメン温めただけなんですけど？",
+        "hi": "खुद को पता ही नहीं लेकिन विपरीत लिंग में बेहद लोकप्रिय। दुकान पर काम करते हुए भी नंबर मिल जाता है।",
+        "th": "ตัวเองไม่รู้เลยแต่เป็นที่นิยมสุดๆ ทำงานร้านสะดวกซื้อก็ได้เบอร์ แค่อุ่นมาม่าเองนะ?",
+        "vi": "Bản thân không biết gì mà được yêu thích cực kỳ. Làm thêm cửa hàng tiện lợi cũng được xin số. Tôi chỉ hâm mì thôi mà?",
+        "id": "Sendiri nggak sadar tapi populer banget sama lawan jenis. Kerja di minimarket juga dapat nomor HP. Saya cuma hangatkan mie lho?"
+      },
+      "number": 1,
+      "title": "본인만 모르는 이성 인기",
+      "titleAnimation": "slideInRight",
+      "icon": "hearts_flying",
+      "iconAnimation": "heartsSwarm",
+      "bgEffect": "sparkleAmbient",
+      "sfx": "heartsFlutter"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "눈빛이 묘하게 촉촉함. 멍때리는 것도 분위기 있어 보임. 하품하는데 옆에서 설렘.",
+        "en": "Eyes are mysteriously dewy. Even spacing out looks atmospheric. They yawn and someone catches feelings.",
+        "ja": "目がなんか潤んでる。ボーッとしてても雰囲気ある。あくびしてるのに隣の人がときめく。",
+        "hi": "आँखों में अजीब सी नमी। बोर होते हुए भी माहौल बना देते हैं। जम्हाई ले रहे हैं और बगल वाला दिल हार बैठा।",
+        "th": "ตาชุ่มฉ่ำลึกลับ เหม่อก็ดูมีบรรยากาศ หาวนอนอยู่คนข้างๆ หัวใจเต้น",
+        "vi": "Ánh mắt ướt át lạ kỳ. Ngồi ngẩn cũng trông có không khí. Ngáp một cái mà người bên cạnh rung động.",
+        "id": "Tatapan matanya basah misterius. Bengong aja keliatan aura. Nguap satu kali orang sebelah langsung jatuh hati."
+      },
+      "number": 2,
+      "title": "멍때리는 것도 분위기 있음",
+      "titleAnimation": "dreamy FadeIn",
+      "icon": "sparkle_eyes",
+      "iconAnimation": "slowTwinkle",
+      "bgEffect": "softBlurPulse",
+      "sfx": "heartbeat"
+    },
+    {
+      "type": "trait",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "연애 시작은 삼초, 유지는 삼개월. 시작할 때 불꽃인데 갑자기 시들어버림. 본인도 왜 그런지 모름.",
+        "en": "Starting a relationship takes three seconds. Maintaining it? Three months max. Fireworks at the start, then it just wilts. They don't know why either.",
+        "ja": "恋愛の始まりは三秒、維持は三ヶ月。花火みたいに始まるのに急にしおれる。本人もなぜかわからない。",
+        "hi": "रिश्ता शुरू करने में तीन सेकंड। निभाने में? तीन महीने। शुरू में आतिशबाज़ी, फिर अचानक मुरझा जाता है।",
+        "th": "เริ่มคบสามวินาที รักษาได้สามเดือน เริ่มมาแบบพลุ แล้วก็เฉาไป ตัวเองก็ไม่รู้ทำไม",
+        "vi": "Bắt đầu yêu ba giây, duy trì ba tháng. Bắt đầu như pháo hoa rồi tự héo. Bản thân cũng không hiểu tại sao.",
+        "id": "Mulai pacaran tiga detik. Bertahan? Tiga bulan. Awalnya kembang api, tiba-tiba layu. Sendiri juga nggak tahu kenapa."
+      },
+      "number": 3,
+      "title": "연애 시작 3초, 유지 3개월",
+      "titleAnimation": "popIn",
+      "icon": "flower_wilt",
+      "iconAnimation": "bloomThenWilt",
+      "bgEffect": "seasonChange",
+      "moodShift": "bittersweet",
+      "sfx": "windChime"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 예술적 감각은 진짜임. 뭘 해도 비주얼이 되고 감성이 있음. 도화살이 원래 예술의 별이거든.",
+        "en": "But the artistic sense is legit. Everything they do has aesthetics and soul. The Peach Blossom is originally the star of art.",
+        "ja": "でも芸術的センスはガチ。何やってもビジュアルがいい。桃花殺はもともと芸術の星だから。",
+        "hi": "लेकिन कलात्मक समझ असली है। जो भी करें सुंदर बनता है। दरअसल ये कला का सितारा है।",
+        "th": "แต่ความรู้สึกด้านศิลปะเป็นของจริง ทำอะไรก็สวย ดาวดอกท้อมันเป็นดาวศิลปะ",
+        "vi": "Nhưng khiếu thẩm mỹ là thật. Làm gì cũng đẹp. Sao Đào Hoa vốn là sao nghệ thuật.",
+        "id": "Tapi selera seni beneran nyata. Apapun yang dibuat jadi estetik. Bintang Bunga Persik memang bintang seni."
+      },
+      "number": 4,
+      "title": "예술의 별 (본인만 모름)",
+      "titleAnimation": "artReveal",
+      "icon": "palette",
+      "iconAnimation": "paintSplash",
+      "bgEffect": "colorfulBurst",
+      "moodShift": "inspiring",
+      "sfx": "cameraShutter"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나한테 도화살 있을까?",
+        "en": "Do you have the Peach Blossom star?",
+        "ja": "あなたに桃花殺はある？",
+        "hi": "क्या आपके पास पीच ब्लॉसम स्टार है?",
+        "th": "คุณมีดาวดอกท้อไหม?",
+        "vi": "Bạn có sao Đào Hoa không?",
+        "id": "Kamu punya bintang Bunga Persik nggak?"
+      },
+      "question": "나한테 도화살 있을까?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "🌸",
+      "gaugeRange": [0, 1],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "blossomBurst",
+      "lottie": "cherry_blossom",
+      "sfx": "magicChime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#도화살", "#사주", "#연애운", "#매력", "#이성인기", "#사주특징"],
+    "en": ["#peachblossom", "#astrology", "#charm", "#romance", "#personality"],
+    "ja": ["#桃花殺", "#四柱推命", "#モテる", "#恋愛運"],
+    "hi": ["#ज्योतिष", "#आकर्षण", "#प्रेम", "#व्यक्तित्व"],
+    "th": ["#ดาวดอกท้อ", "#ดวงความรัก", "#เสน่ห์"],
+    "vi": ["#đàoHoa", "#tửvi", "#tìnhyêu", "#sứchútdẫn"],
+    "id": ["#bungaPersik", "#ramalan", "#pesona", "#cinta"]
+  }
+}

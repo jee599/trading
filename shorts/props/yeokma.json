@@ -1,0 +1,171 @@
+{
+  "id": "yeokma_001",
+  "title": {
+    "ko": "역마살 있는 사람 특징",
+    "en": "People with the Traveling Horse star",
+    "ja": "駅馬殺がある人の特徴",
+    "hi": "जिनके पास यात्रा का सितारा हो",
+    "th": "คนที่มีดาวม้าเดินทาง",
+    "vi": "Người có sao Dịch Mã",
+    "id": "Ciri orang yang punya bintang Kuda Perjalanan"
+  },
+  "theme": {
+    "bg": ["#050d1a", "#1B4B7C", "#3498DB"],
+    "accent": "#87CEEB",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "travel"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "역마살 있는 사람 특징",
+        "en": "Signs you have the Traveling Horse star",
+        "ja": "駅馬殺がある人の特徴",
+        "hi": "यात्रा के सितारे वाले लोगों की पहचान",
+        "th": "ลักษณะคนที่มีดาวม้าเดินทาง",
+        "vi": "Đặc điểm người có sao Dịch Mã",
+        "id": "Ciri-ciri orang yang punya bintang Kuda Perjalanan"
+      },
+      "text": "역마살 있는 사람 특징",
+      "textAnimation": "airportFlipBoard",
+      "lottie": "airplane",
+      "lottiePosition": "topRight",
+      "lottieScale": 0.8,
+      "cameraEffect": "panRight",
+      "bgEffect": "cloudMove",
+      "sfx": "airportJingle"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "한 곳에 오래 못 있음. 자리에 앉으면 십분 만에 다리 떨기 시작함. 이년 이상 같은 직장 다니면 세계 신기록.",
+        "en": "Can't stay in one place. Sit them down and they start bouncing their leg in ten minutes. Same job for two years equals world record.",
+        "ja": "一箇所に長くいられない。座ると十分で貧乏ゆすり。同じ職場二年で世界記録。",
+        "hi": "एक जगह ज़्यादा देर नहीं रह पाते। बैठाओ तो दस मिनट में पैर हिलाने लगते हैं। दो साल एक नौकरी तो विश्व रिकॉर्ड।",
+        "th": "อยู่ที่เดียวนานไม่ได้ นั่งไม่ถึงสิบนาทีเริ่มเขย่าขา ทำงานที่เดียวสองปีเท่ากับสถิติโลก",
+        "vi": "Không ở một chỗ lâu được. Ngồi xuống mười phút là bắt đầu lắc chân. Làm cùng công ty hai năm là kỷ lục thế giới.",
+        "id": "Nggak bisa diam di satu tempat lama. Duduk sepuluh menit langsung goyang kaki. Kerja di tempat yang sama dua tahun sama dengan rekor dunia."
+      },
+      "number": 1,
+      "title": "가만히 10분도 못 있음",
+      "titleAnimation": "slideInLeft",
+      "icon": "restless_chair",
+      "iconAnimation": "vibrateSlide",
+      "bgEffect": "timerCountdown",
+      "timerFrom": 10,
+      "sfx": "chairSqueak"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "여행 계획 세우는 게 취미. 실제로 안 가도 계획만 세우면 기분 좋아짐. 구글맵 켜면 심박수 올라감.",
+        "en": "Planning trips is the hobby. Don't even need to go. Just planning makes them happy. Open Google Maps and their heart rate spikes.",
+        "ja": "旅行計画を立てるのが趣味。実際行かなくても計画だけで幸せ。Googleマップ開くと心拍数上がる。",
+        "hi": "यात्रा की योजना बनाना ही शौक है। जाना ज़रूरी नहीं। बस प्लान बनाने से खुश। गूगल मैप खोलो तो दिल तेज़ धड़के।",
+        "th": "วางแผนเที่ยวคืองานอดิเรก ไม่ต้องไปจริง แค่วางแผนก็แฮปปี้ เปิด Google Maps หัวใจเต้นแรง",
+        "vi": "Lập kế hoạch du lịch là sở thích. Không cần đi thật. Chỉ cần lên kế hoạch là vui. Mở Google Maps là tim đập nhanh.",
+        "id": "Merencanakan perjalanan itu hobinya. Nggak perlu pergi beneran. Cuma planning aja udah seneng. Buka Google Maps detak jantung naik."
+      },
+      "number": 2,
+      "title": "구글맵 = 힐링 앱",
+      "titleAnimation": "popIn",
+      "icon": "map_pin",
+      "iconAnimation": "pinDropMultiple",
+      "pinCount": 8,
+      "bgEffect": "mapZoom",
+      "sfx": "pinDrop"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "이사를 비정상적으로 많이 함. 부동산 앱이 홈 화면 일번. 정착이라는 단어에 알레르기.",
+        "en": "Moves an abnormal amount. Real estate app is home screen number one. Allergic to the word settle down.",
+        "ja": "引っ越し回数が異常。不動産アプリがホーム画面一番。定住という言葉にアレルギー。",
+        "hi": "बेहद ज़्यादा बार घर बदलते हैं। रियल एस्टेट ऐप होम स्क्रीन पर नंबर एक। बसना शब्द से एलर्जी।",
+        "th": "ย้ายบ้านบ่อยผิดปกติ แอปอสังหาอยู่หน้าจอหลักอันดับหนึ่ง แพ้คำว่าตั้งรกราก",
+        "vi": "Chuyển nhà nhiều bất thường. App bất động sản là ứng dụng số một. Dị ứng với từ an cư.",
+        "id": "Pindah rumah abnormal banyaknya. Aplikasi properti di home screen nomor satu. Alergi sama kata menetap."
+      },
+      "number": 3,
+      "title": "이사 횟수 = 나이",
+      "titleAnimation": "slideInLeft",
+      "icon": "moving_boxes",
+      "iconAnimation": "stackUp",
+      "counter": { "label": "이사", "from": 0, "to": 14, "speed": "fast" },
+      "bgEffect": "boxesFalling",
+      "moodShift": "comedic",
+      "sfx": "tapeRip"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 어디를 가든 적응력이 미침. 해외에서 더 잘 됨. 낯선 곳이 오히려 편함.",
+        "en": "But they adapt anywhere. Actually do better abroad. Unfamiliar places feel more like home.",
+        "ja": "でもどこ行っても適応力がヤバい。海外の方がうまくいく。知らない場所の方がむしろ落ち着く。",
+        "hi": "लेकिन कहीं भी जाएँ, ढल जाते हैं। विदेश में और बेहतर चलता है। अनजानी जगह में ज़्यादा सुकून।",
+        "th": "แต่ไปที่ไหนก็ปรับตัวได้ ต่างประเทศยิ่งเก่ง ที่แปลกกลับรู้สึกสบาย",
+        "vi": "Nhưng đi đâu cũng thích nghi được. Ở nước ngoài còn giỏi hơn. Chỗ lạ lại thấy thoải mái.",
+        "id": "Tapi di mana pun bisa adaptasi. Di luar negeri malah lebih bagus. Tempat asing justru terasa nyaman."
+      },
+      "number": 4,
+      "title": "어디서든 적응, 해외에서 더 빛남",
+      "titleAnimation": "worldTourReveal",
+      "icon": "globe",
+      "iconAnimation": "spinGlow",
+      "bgEffect": "citySkylineScroll",
+      "cities": ["Tokyo", "Paris", "New York", "Bali", "Seoul"],
+      "moodShift": "epic",
+      "sfx": "airplaneWhoosh"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나한테 역마살 있을까?",
+        "en": "Do you have the Traveling Horse star?",
+        "ja": "あなたに駅馬殺はある？",
+        "hi": "क्या आपके पास यात्रा का सितारा है?",
+        "th": "คุณมีดาวม้าเดินทางไหม?",
+        "vi": "Bạn có sao Dịch Mã không?",
+        "id": "Kamu punya bintang Kuda Perjalanan nggak?"
+      },
+      "question": "나한테 역마살 있을까?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "✈️",
+      "gaugeRange": [0, 1],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "boardingPassFlip",
+      "lottie": "airplane",
+      "sfx": "boardingChime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#역마살", "#사주", "#여행", "#해외살이", "#이사", "#사주특징"],
+    "en": ["#travelingstar", "#astrology", "#wanderlust", "#nomad"],
+    "ja": ["#駅馬殺", "#四柱推命", "#旅好き", "#海外生活"],
+    "hi": ["#ज्योतिष", "#यात्रा", "#भटकना"],
+    "th": ["#ดาวม้าเดินทาง", "#ท่องเที่ยว", "#ย้ายบ้าน"],
+    "vi": ["#dịchMã", "#tửvi", "#duLịch"],
+    "id": ["#kudaPerjalanan", "#ramalan", "#traveling"]
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "gwaegang_001",
+  "title": {
+    "ko": "괴강살 있는 사람 특징",
+    "en": "People with the Strong Star",
+    "ja": "魁罡殺がある人の特徴"
+  },
+  "theme": {
+    "bg": ["#0a0a0a", "#2C2C2C", "#555555"],
+    "accent": "#C0C0C0",
+    "textColor": "#FFFFFF",
+    "lottieTheme": "lightning"
+  },
+  "totalDurationFrames": 660,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+
+  "scenes": [
+    {
+      "type": "hook",
+      "startFrame": 0,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "괴강살 있는 사람 특징",
+        "en": "Signs you have the Strong Star in your chart",
+        "ja": "魁罡殺がある人の特徴"
+      },
+      "text": "괴강살 있는 사람 특징",
+      "textAnimation": "lightningReveal",
+      "lottie": "lightning",
+      "lottiePosition": "background",
+      "cameraEffect": "flashZoom",
+      "bgEffect": "thunderFlash",
+      "sfx": "thunder"
+    },
+    {
+      "type": "trait",
+      "startFrame": 90,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "카리스마가 무서울 정도. 말 안 해도 분위기 장악함. 조용히 서 있기만 해도 주변이 긴장함.",
+        "en": "Charisma so intense it's almost scary. Controls the room without saying a word. Just standing quietly makes everyone tense.",
+        "ja": "カリスマが怖いほど。何も言わなくても場を支配する。静かに立ってるだけで周りが緊張する。"
+      },
+      "number": 1,
+      "title": "카리스마 = 무기",
+      "titleAnimation": "slideInLeft",
+      "icon": "crown_dark",
+      "iconAnimation": "descendGlow",
+      "bgEffect": "shadowGrow",
+      "sfx": "bassDrop"
+    },
+    {
+      "type": "trait",
+      "startFrame": 210,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "호불호가 극단적. 중간이 없음. 좋으면 끝까지 좋고 싫으면 존재 자체를 지움. 회색지대 같은 거 없음.",
+        "en": "Extreme likes and dislikes. No middle ground. Love them or erase their existence. No gray area whatsoever.",
+        "ja": "好き嫌いが極端。中間がない。好きなら最後まで好き、嫌いなら存在ごと消す。グレーゾーンなし。"
+      },
+      "number": 2,
+      "title": "호불호: 중간은 없다",
+      "titleAnimation": "splitScreen",
+      "icon": "ox_clash",
+      "iconAnimation": "collide",
+      "splitLabels": ["🤍", "🖤"],
+      "bgEffect": "splitContrast",
+      "sfx": "metalClash"
+    },
+    {
+      "type": "emotional",
+      "startFrame": 330,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "혼자 있는 시간이 필수. 사람 많은 곳에 오래 있으면 에너지가 바닥남. 충전은 무조건 혼자.",
+        "en": "Alone time is essential. Too long in crowded places drains their energy completely. Recharging is always solo.",
+        "ja": "一人の時間が必須。人が多い場所に長くいるとエネルギーが底をつく。充電は絶対一人。"
+      },
+      "number": 3,
+      "title": "혼자 충전 필수 (안 하면 폭발)",
+      "titleAnimation": "fadeInSlow",
+      "highlightWord": "폭발",
+      "highlightColor": "#FF4444",
+      "icon": "battery",
+      "iconAnimation": "drainToCharge",
+      "bgEffect": "crowdFadeToAlone",
+      "moodShift": "calm",
+      "sfx": "quietAmbient"
+    },
+    {
+      "type": "redemption",
+      "startFrame": 450,
+      "durationFrames": 120,
+      "tts": {
+        "ko": "근데 리더 하면 미친듯이 잘함. 결단력이 칼 같고 실행력이 미침. 역사 속 영웅들 중에 괴강살이 많음.",
+        "en": "But as a leader they're absolutely insane. Decision making sharp as a blade execution unmatched. Many heroes in history had this star.",
+        "ja": "でもリーダーやらせたら異常にできる。決断力がナイフみたいで実行力がヤバい。歴史上の英雄にも多い。"
+      },
+      "number": 4,
+      "title": "리더하면 미친 실행력",
+      "titleAnimation": "swordSlashReveal",
+      "icon": "commander",
+      "iconAnimation": "crownDescend",
+      "bgEffect": "epicLightRays",
+      "moodShift": "powerful",
+      "sfx": "fanfare"
+    },
+    {
+      "type": "cta",
+      "startFrame": 570,
+      "durationFrames": 90,
+      "tts": {
+        "ko": "나한테 괴강살 있을까?",
+        "en": "Do you have the Strong Star?",
+        "ja": "あなたに魁罡殺はある？"
+      },
+      "question": "나한테 괴강살 있을까?",
+      "questionAnimation": "bounceIn",
+      "gaugeLabel": "⚡",
+      "gaugeRange": [0, 1],
+      "gaugeDisplay": "???",
+      "ctaUrl": "fortunlab.store",
+      "ctaText": "fortunlab.store",
+      "ctaAnimation": "lightningLink",
+      "lottie": "lightning",
+      "sfx": "thunderChime"
+    }
+  ],
+
+  "hashtags": {
+    "ko": ["#괴강살", "#사주", "#카리스마", "#리더십", "#사주특징"],
+    "en": ["#strongstar", "#astrology", "#charisma", "#leadership"],
+    "ja": ["#魁罡殺", "#四柱推命", "#カリスマ", "#リーダーシップ"]
+  }
+}

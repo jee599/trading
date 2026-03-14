@@ -9,6 +9,7 @@
 ## Directory Structure
 
 - `shorts/package.json`: Node workspace manifest and Remotion scripts.
+- `shorts/SHORTS_PIPELINE_REMOTION_FINAL.md`: Imported reference write-up for the intended Remotion-based shorts pipeline.
 - `shorts/remotion.config.ts`: Remotion bundling and render defaults.
 - `shorts/tsconfig.json`: TypeScript settings for React plus Remotion.
 - `shorts/finalize.sh`: Post-render orchestration for TTS, subtitles, and final muxing.
@@ -19,6 +20,7 @@
 - `shorts/src/styles`: Theme tokens and language-aware font helpers.
 - `shorts/src/types.ts`: Storyboard schema types and default helpers.
 - `shorts/props`: Storyboard JSON inputs created by a writing agent.
+- `shorts/props`: Storyboard JSON inputs created by a writing agent, including the imported sample set provided by the user.
 - `shorts/public`: Optional fonts, icons, BGM, and Lottie files with safe rendering fallbacks.
 - `shorts/scripts/tts.py`: Narration generation using a local Kokoro endpoint when available and `edge-tts` as fallback.
 - `shorts/scripts/subtitles.py`: Subtitle timing generation that prefers Whisper alignment when installed and falls back to deterministic segment timing.
