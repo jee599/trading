@@ -24,3 +24,6 @@ shorts/output/
 shorts/.remotion/
 shorts/dist/
 shorts/*.log
+volley/node_modules/
+volley/dist/
+volley/*.log

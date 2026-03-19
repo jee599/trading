@@ -2,74 +2,66 @@
 
 ## Current Goal
 
-- Rebuild this repository as a zero-cost Remotion workspace that can turn saju storyboard JSON into vertical shorts MP4 outputs.
+- Rebuild this repository as a browser-based, Pikachu Volleyball-inspired multiplayer game with better visuals and smoother performance than a bare prototype.
 
 ## Current Task
 
-- Apply the provided finalized Remotion pipeline reference and import the supplied storyboard JSON files into the `shorts/` workspace.
+- Pivot the active workspace to `volley/` and deliver a playable room-based online multiplayer MVP with polished presentation and documented setup.
 
 ## Working Session
 
 - Agent: GPT
 - Version: GPT-5 Codex
-- Started At: 2026-03-14
-- Scope: Align the `shorts/` workspace with the provided finalized pipeline spec and add the supplied storyboard JSON set
-- Expected Output: The provided pipeline reference is reflected where needed in code/docs and the supplied JSON files are usable under `shorts/props`
+- Started At: 2026-03-19
+- Scope: Realign the repository to the new multiplayer game goal, build the initial `volley/` client and server, and verify the local workflow
+- Expected Output: A documented `volley/` workspace where two players can join the same room and play a synchronized arcade volleyball match locally
 
 ## Done
 
-- Archived the previous Unity-specific direction in favor of the requested saju shorts automation pivot.
-- Updated the project brief and architecture notes to match the new Remotion-based pipeline direction.
-- Removed the previous Unity-specific tracked code, setup files, and root-side tooling that no longer fit the new project.
-- Added a new `shorts/` Remotion workspace with package config, TS config, composition registration, scene components, shared motion components, styles, and sample `props/fire_many.json`.
-- Added Bash and PowerShell finalize and batch scripts so the workspace can run in both the requested shell style and the current Windows environment.
-- Added Python narration and subtitle scripts with `edge-tts` fallback, optional Kokoro support, JSON-timed ASS subtitle generation, and optional Whisper alignment mode.
-- Updated `.gitignore` for Node, Remotion, and generated video outputs.
-- Verified `npm run typecheck` passes in `shorts/`.
-- Verified sample render output with `npx remotion render SajuShort output/fire_many_ko.mp4 --props=props/fire_many.json`.
-- Verified finalization output with `powershell -ExecutionPolicy Bypass -File .\\finalize.ps1 output/fire_many_ko.mp4 props/fire_many.json ko`.
-- Imported the provided reference file as `shorts/SHORTS_PIPELINE_REMOTION_FINAL.md`.
-- Replaced the broken sample storyboard text with the provided UTF-8 JSON source files under `shorts/props`.
-- Added the provided storyboard set: `byung_daymaster`, `dohwa`, `fire_many`, `gwaegang`, `metal_few`, `water_few`, `wood_many`, and `yeokma`.
-- Relaxed the JSON animation schema so the supplied finalized storyboard variants are accepted without parse failures.
-- Added broader animation fallbacks and icon keyword mapping so the new storyboard set renders meaningfully even when a motion name is not custom-implemented yet.
-- Verified an imported storyboard render with `npx remotion render SajuShort output/water_few_ko.mp4 --props=props/water_few.json`.
-- Verified imported-storyboard finalization with `powershell -ExecutionPolicy Bypass -File .\\finalize.ps1 output/water_few_ko.mp4 props/water_few.json ko`.
+- Established the sequential-agent documentation workflow and root handoff files.
+- Previously pivoted the repository away from an earlier Unity prototype and later into a Remotion-based `shorts/` workspace.
+- Reviewed the new user request and confirmed the active direction now needs another pivot into a multiplayer arcade game.
+- Rewrote `PROJECT_BRIEF.md` and `ARCHITECTURE.md` so the repository goal, constraints, and architecture now reflect the new `volley/` direction.
+- Updated this status file so the current goal, task, and working session match the multiplayer implementation work that is now in progress.
+- Added a new `volley/` workspace with Vite, TypeScript, Phaser, Socket.IO, shared protocol types, and a Windows-friendly local run flow.
+- Implemented a server-authoritative 1v1 room system with create or join actions, synchronized snapshots, countdowns, scoring, serve resets, and disconnect handling.
+- Implemented the first playable match ruleset: move, jump, power hit, net collisions, ball-ground scoring, and score resets after a set win.
+- Built a polished browser presentation with a responsive control panel, HUD, layered stadium backdrop, electric mascot rendering, glow trail ball visuals, and spark burst effects.
+- Bundled the open `@fontsource/chakra-petch` resource locally for the interface and HUD styling while keeping character art code-drawn to avoid copyright issues.
+- Verified `npm run typecheck` passes in `volley/`.
+- Verified `npm run build` passes in `volley/`.
+- Verified runtime room flow by starting the server and connecting two Socket.IO test clients through the sequence `room:create -> room:join -> countdown snapshot`.
+- Verified the live server health endpoint returned `{"ok":true,"rooms":0,...}` on `http://127.0.0.1:3001/health`.
 
 ## Next
 
-- Continue filling out the remaining saju catalog beyond the eight imported storyboard files.
-- Drop real branded fonts, optional Lottie files, and royalty-free BGM into `shorts/public` to replace the current graceful fallbacks.
-- Decide whether Whisper alignment should become the default subtitle mode once the local install cost is acceptable.
-- Implement richer per-animation variants for the newly allowed storyboard motion names if higher visual fidelity is needed.
+- Add match feel polish such as richer hit audio, camera shake, and more varied hit-angle rules.
+- Decide whether to add a bot opponent so solo tuning and regression checks do not require two humans every time.
+- Improve deployment ergonomics if the user wants an always-on hosted room server next.
 
 ## Remaining
 
-- Expand content coverage, polish assets, and tune subtitle styling with real production media.
-- Add more language presets and voice selection rules if quality needs differ by market.
+- Deeper game tuning, audio polish, and optional production art assets are still open.
+- Decide whether legacy `shorts/` material should remain archived in place or be removed in a later cleanup task after the new game is stable.
 
 ## Blocked
 
-- None for the verified sample pipeline.
+- None for the playable multiplayer MVP.
 
 ## Recent Changes
 
-- Repository direction pivoted from a Unity prototype to a Remotion-based shorts automation workspace.
-- `PROJECT_BRIEF.md` and `ARCHITECTURE.md` were rewritten for the new pipeline.
-- The sample pipeline now renders and finalizes a Korean `fire_many` short end to end inside `shorts/`.
-- The provided finalized pipeline reference and eight storyboard JSON files were imported into `shorts/`.
-- The renderer now accepts wider animation-name inputs from automation-generated storyboard files.
+- The active project direction changed from saju-shorts video automation to a browser-based multiplayer arcade volleyball game.
+- Root project documents now describe the new goal and the implemented `volley/` architecture.
+- The repository now contains a runnable Phaser plus Socket.IO game workspace with local room creation, join flow, and synchronized rallies.
 
 ## Notes for Next Agent
 
-- The user explicitly wants the old implementation replaced, not layered on top.
-- Keep the new project under a top-level `shorts/` folder and retain the sequential-agent documentation workflow at the repo root.
-- Preserve zero-cost, CPU-friendly defaults and graceful fallbacks when optional media assets are missing.
-- `finalize.sh` matches the requested Bash workflow, but the current machine does not have `bash`, so `finalize.ps1` was added and used for real verification.
-- Remotion required `zod` version `4.3.6`; the package versions are now pinned to avoid future mismatch warnings.
-- The provided JSON set introduced many more animation labels than the first sample; the schema now accepts free-form names and `AnimatedText` falls back heuristically for unknown variants.
-- `shorts/SHORTS_PIPELINE_REMOTION_FINAL.md` is the imported reference document that matches the user's supplied pipeline write-up.
-- Update `Done`, `Next`, `Blocked`, and `Agent Contribution` again before ending the task.
+- The latest user request supersedes the previous `shorts/` direction; active work should happen under `volley/`.
+- Keep the handoff process strict: update docs when structure or scope changes, and close the task with `Done`, `Next`, `Blocked`, and contribution data current.
+- Favor free or open resources and avoid directly shipping copyrighted Pokemon art or audio.
+- `volley/server/index.ts` owns the authoritative simulation; keep client-side logic visual unless there is a strong reason to add prediction.
+- Local verification already covered `npm run typecheck`, `npm run build`, the server health endpoint, and a two-client Socket.IO room flow.
+- The MVP currently uses code-drawn mascots plus a bundled open font resource; if higher-fidelity art is added next, keep the licensing explicit in docs.
 
 ## Agent Contribution
 
@@ -77,14 +69,14 @@
 
 | Agent | Version | Scope | Key Contribution | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | Integrate supplied finalized pipeline assets and storyboard set | Imported the provided reference and eight JSONs, widened schema compatibility, and re-verified render/finalize paths | 100% |
+| GPT | GPT-5 Codex | Pivot repo docs and build the first multiplayer game workspace | Reoriented the repository to `volley/`, implemented the playable Phaser plus Socket.IO MVP, and verified the local multiplayer flow | 100% |
 | Claude | | | | |
 
 ### Cumulative
 
 | Agent | Version | Tasks Completed | Key Areas | Approx. Contribution |
 | --- | --- | --- | --- | --- |
-| GPT | GPT-5 Codex | 9 | Workflow rules, repo docs, status tracking, Unity scaffold, repository pivot, Remotion pipeline, storyboard import, render automation, and verification | 100% |
+| GPT | GPT-5 Codex | 11 | Workflow rules, status tracking, prior project pivots, Remotion workspace, storyboard import, and the new multiplayer-game MVP | 100% |
 | Claude | | | | |
 
 Contribution values are rough operational notes, not exact metrics.
